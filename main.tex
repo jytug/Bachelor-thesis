@@ -84,7 +84,7 @@ Niech $ (X, d) $ będzie przestrzenią metryczną. Odcinkiem geodezyjnym nazywam
 przekształcenie izometryczne $ \mathbb{R} \supset I \xrightarrow{\rho} X $, gdzie 
 $ I =[a,b]$ jest odcinkiem. Przestrzeń $ X $ nazwiemy (jednoznacznie) geodezyjną, 
 jeśli każde dwa punkty można połączyć (jednoznacznie wyznaczonym) odcinkiem 
-geodezyjnym. 
+geodezyjnym.
 
 \begin{example}
 	Każda przestrzeń euklidesowa $ \mathbb{R}^n $ jest jednoznacznie geodezyjna, 
@@ -94,7 +94,40 @@ geodezyjnym.
 	geodezyjną.
 \end{example}
 
+Dalej będziemy rozważać przestrzenie geodezyjne. Dla wygody przez $ [x,y] $ będziemy 
+oznaczać (dowolny) odcinek geodezyjny łączący $ x \in X$ z $ y \in X $ (a dokładniej 
+obraz tego odcinka).
+
+Zwróćmy uwagę, że jeśli $ X $ jest przestrzenią geodezyjną, to dla każdej trójki 
+$ (x,y,z) \in X^3 $ istnieje trójka $ (\overline{x},\overline{y}, \overline{z}) 
+\in \left(\mathbb{R}^2\right)^3$ taka, że $ d(x,y) = d_{\mathbb{R}^2} (\overline{x}, 
+\overline{y}), ~ d(x,z) = d_{\mathbb{R}^2} (\overline{x}, \overline{z}), 
+~ d(y,z) = d_{\mathbb{R}^2} (\overline{y}, \overline{z})  $. Innymi słowy, każdemu 
+trójkątowi z $ X $ można przypisać trójkąt z przestrzeni euklidesowej $ \mathbb{R}^2 $ o 
+bokach takiej samej długości. Taki trójkąt jest wyznaczony jednoznacznie z dokładnością 
+do izometrii przestrzeni $ \mathbb{R}^2 $ i nazwiemy go trójkątem porównania $ (x,y,z) $.
+
 \begin{definition}
-Odcinkiem geodezyjnym
+	Powiemy, że przestrzeń geodezyjna $ X $ jest $ \text{\textbf{CAT(0)}} $, jeśli 
+	dla każdej trójki $ (x,y,z) \in X^3 $ oraz punktu $ p \in [y,z] $ oraz odpowiadającym 
+	im trójkątowi porównania $ (\overline{x}, \overline{y}, \overline{z}) \in 
+	\left(\mathbb{R}^2\right)^3 $ i punktowi $ \overline{p} \in [\overline{y}, 
+	\overline{z}] $ zachodzi nierówność:
+	$$ d(x,p) \leq d_{\mathbb{R}^2}(\overline{x}, \overline{p}) $$
 \end{definition} 
+
+Innymi słowy, w przestrzeniach $ \text{CAT(0)} $ trójkąty są ,,szczuplejsze'' niż w 
+przestrzeni euklidesowej. O takich przestrzeniach powiemy, że mają niedodatnią 
+krzywiznę.
+
+%%miejsce na rysuneczek chudego trójkąta
+
+\begin{example} Nietrudno jest o kilka przykładów takich przestrzeni:
+	\begin{itemize}
+	\item Każda przestrzeń euklidesowa $ \mathbb{R}^n $ jest $ \text{CAT(0)} $. Wówczas 
+	wymieniona nierówność jest po prostu równością.
+	\item Graf metryczny jest przestrzenią $ \text{CAT(0)} $ wtedy i tylko wtedy, gdy 
+	jest drzewem.
+	\end{itemize}
+\end{example}
 \end{document}
