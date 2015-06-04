@@ -15,6 +15,9 @@
 \theoremstyle{definition}
 \newtheorem{example}{Przykład}[section]
 
+\theoremstyle{definition}
+\newtheorem{corollary}{Wniosek}[section]
+
 \theoremstyle{plain}
 \newtheorem{lemma}{Lemat}[section]
 
@@ -25,9 +28,9 @@
 
 \nralbumu{332069}
 
-\title{Skończony wymiar asymptotyczny kompleksów kostkowych $\text{CAT(0)}$}
+\title{Własność A dla kompleksów kostkowych $\text{CAT(0)}$}
 
-\tytulang{Finite asymptotic dimesion for $\text{CAT(0)}$ cube complexes}
+\tytulang{Property A for $\text{CAT(0)}$ cube complexes}
 
 \opiekun{prof. dr hab. Sławomira Nowaka\\
 			Instytut Matematyki\\
@@ -43,14 +46,17 @@
 }
 
 \klasyfikacja{14 Algebraic Geometry\\
-	 	54F45 Dimension theory\\
 	}
 
 \keywords{
-	$ \text{CAT(0)} $, wymiar asymptotyczny, kompleks kostkowy
+	Kompleks kostkowy $ \text{CAT(0)} $, własność A
 }
 
 \newtheorem{defi}{Definicja}[section]
+
+\def\quotient#1#2{%
+    \raise1ex\hbox{$#1$}\Big/\lower1ex\hbox{$#2$}%
+}
 
 \begin{document}
 \maketitle
@@ -59,9 +65,8 @@
 
 \begin{abstract}
 %	{
-	Celem tej pracy jest udowodnienie, że wymiar asymptotyczny skończenie 
-	wymiarowych kompleksów kostkowych $\text{CAT(0)}$ jest ograniczony 
-	przez ich wymiar topologiczny.
+	Praca ta skupia się na dowodzie, iż kompleksy kostkowe $\text{CAT(0)} $
+	mają własność A.
 %	}
 \end{abstract}
 
@@ -130,4 +135,69 @@ krzywiznę.
 	jest drzewem.
 	\end{itemize}
 \end{example}
+
+\begin{remark}
+	Każda przestrzeń $ \text{CAT(0)} $ jest jednoznacznie geodezyjna.
+\end{remark}
+\begin{proof}
+	Przypuśćmy przeciwnie i niech $ x,y \in X $ łączą dwa różne odcinki geodezyjne, 
+	powiedzmy $ [x,y], \overline{[x,y]} $.	Wówczas istnieją $ [x,y] \ni p \neq \overline p 
+	\in	\overline{[x,y]}  $ takie, że $ d(x,p) = d(x,\overline{p}) $ oraz $ d(y,p) = 
+	d(y, \overline{p}) $. Wówczas trójkątowi $ (x,y,\overline{p}) $ w $ \mathbb{R}^2$ 
+	odpowiada trójkąt zdegenerowany, zaś $ d(p,\overline{p}) > 0 $, co przeczy nierówności 
+	$ \text{CAT(0)} $
+\end{proof}
+
+\begin{corollary}
+	Sfera $ S^2 $ nie jest przestrzenią $ \text{CAT(0)} $. Płaszczyzna $ \mathbb{R}^2 $ 
+	wyposażona w metrykę pochodzącą od normy $ \ell_1 $ nie jest przestrzenią $ \text{CAT(0)} $
+	%miejsce na rysuneczek płaszczyzny z l_1
+\end{corollary}
+
+\section{Kompleksy kostkowe $ \text{CAT(0)} $}
+Niech $ K = [0,1]^n $ będzie $ n $-wymiarową kostką. Będzie to podstawowy ,,budulec'' 
+interesujących nas przestrzeni. Przez ścianę o kowymiarze równym $ 1 $ będziemy rozumieć 
+zbiór $$ F_{i,\varepsilon}  = \{x \in K : ~ x_i = \varepsilon\}, ~ \text{ dla } i = 1 
+\dots n \text{ oraz }\varepsilon \in \{0,1\}$$
+
+Wszystkie ściany o niższym kowymiarze (o wyższym wymiarze) można otrzymać jako 
+przecięcie ścian o wyższym kowymiarze.
+
+\begin{definition}
+	Niech $ K,K' $ będą dwiema kostkami oraz $ F \subset K, ~ F' \subset K' $ będą 
+	ich ścianami. \textbf{Sklejeniem} (lub \textbf{przyłączeniem}) $ K $ z $ K' $ nazwiemy 
+	izometrię $ \varphi: F \rightarrow F' $.
+\end{definition}
+
+\begin{definition}
+	Przypuśćmy, że $ \mathcal{K} $ jest zbiorem kostek (dla każdego $ K \in 
+	\mathcal{K} $ istnieje $ n(K) \in \mathbb{N} $ takie, że $ K \simeq [0,1]^{n(K)} $), 
+	zaś $ \mathcal{S} $ - zbiorem sklejeń elementów $ \mathcal{K} $ (każdemu 
+	$ \varphi \in \mathcal{S} $ odpowiadają kostki $ K = K(\varphi), K' = 
+	K'(\varphi) \in \mathcal{K} $ oraz ściany $ F \subset K, F' \subset K' $. Załóżmy 
+	wreszcie, że taka para 	$ (\mathcal{K}, \mathcal{S})  $ spełnia następujące warunki:
+
+	\begin{enumerate}
+		\item Żadna kostka nie jest sklejona sama ze sobą.
+		\item Dla każdych dwóch kostek $ K \neq K' $ istnieje co najwyżej jedno
+		sklejenie $ K $ z $ K'$.
+	\end{enumerate}
+
+	Wówczas w następujący sposób można zdefiniować \textbf{kompleks kostkowy}:
+	$$ X =  \quotient{\left( \bigsqcup\limits_{K \in \mathcal{K}} C \right)}{\sim} $$
+
+	gdzie $ \sim $ dla każdego $ \varphi \in \mathcal{S} $ utożsamia dziedzinę $ \varphi $ 
+	z jego obrazem, to znaczy: $$ \{ x \sim \varphi(x) ~ | ~ \varphi \in \mathcal{S}, ~ 
+	x \in \text{dom}(\varphi) \} $$
+\end{definition}
+
+\begin{remark}
+	W ten sposób zdefiniowany kompleks kostkowy jest przestrzenią metryczną, przy czym 
+	metryka długości\footnote{length metric} indukowana jest z metryki euklidesowej 
+	na $ [0,1]^n \subset \mathbb{R}^n$. Odległość punktów $ x,y $ mierzona w metryce 
+	długości jest to infinum długości krzywych $ \gamma : [a,b] \rightarrow X $ 
+	łączących $ x$ z $ y $. Długość krzywej definiujemy następująco: 
+	$$ l(\gamma) = \sup\limits_{a = t_0 \leq \dots \leq t_n = b} \sum\limits_{i=0}^{n-1}
+	d(\gamma(t_i), \gamma(t_{i+1})) $$
+\end{remark}
 \end{document}
