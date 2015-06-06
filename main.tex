@@ -13,6 +13,9 @@
 \newtheorem{remark}{Uwaga}[section]
 
 \theoremstyle{definition}
+\newtheorem{proposition}{Stwierdzenie}[section]
+
+\theoremstyle{definition}
 \newtheorem{example}{Przykład}[section]
 
 \theoremstyle{definition}
@@ -65,7 +68,7 @@
 
 \begin{abstract}
 %	{
-	Praca ta skupia się na dowodzie, iż kompleksy kostkowe $\text{CAT(0)} $
+	Praca ta skupia się na dowodzie, iż kompleksy kostkowe $\text{CAT(0)} $
 	mają własność A.
 %	}
 \end{abstract}
@@ -156,8 +159,8 @@ krzywiznę.
 
 \section{Kompleksy kostkowe $ \text{CAT(0)} $}
 Niech $ K = [0,1]^n $ będzie $ n $-wymiarową kostką. Będzie to podstawowy ,,budulec'' 
-interesujących nas przestrzeni. Przez ścianę o kowymiarze równym $ 1 $ będziemy rozumieć 
-zbiór $$ F_{i,\varepsilon}  = \{x \in K : ~ x_i = \varepsilon\}, ~ \text{ dla } i = 1 
+interesujących nas przestrzeni. Przez ścianę o kowymiarze równym 1 będziemy rozumieć zbiór 
+$$ F_{i,\varepsilon}  = \{x \in K : ~ x_i = \varepsilon\}, ~ \text{ dla } i = 1 
 \dots n \text{ oraz }\varepsilon \in \{0,1\}$$
 
 Wszystkie ściany o niższym kowymiarze (o wyższym wymiarze) można otrzymać jako 
@@ -200,4 +203,92 @@ przecięcie ścian o wyższym kowymiarze.
 	$$ l(\gamma) = \sup\limits_{a = t_0 \leq \dots \leq t_n = b} \sum\limits_{i=0}^{n-1}
 	d(\gamma(t_i), \gamma(t_{i+1})) $$
 \end{remark}
+
+\begin{proposition}
+	Z powyższej definicji łatwo wynikają następujące fakty:
+	\begin{itemize}
+	\item Obcięcie rzutowania $ p : \bigsqcup_{K \in \mathcal{K}} \rightarrow X$ do jednej 
+	kostki $ K \in \mathcal{K}$
+	\item Niepuste przecięcie dwóch kostek jest ścianą obydwu.
+	\end{itemize}	
+\end{proposition}
+
+\begin{example}
+	Łatwo o kilka prostych przykładów:
+	\begin{itemize}
+	\item Rozważmy graf metryczny bez wierzchołków izolowanych, w którym każda krawędź ma 
+	długość 1. Każda krawędź jest izometryczna z $ [0,1] $, zaś sklejenia to
+	po prostu izometrie punktów. Jest to prosty przykład kompleksu kostkowego.
+	\item Torus można interpretować jako kompleks kostkowy. Rozważmy zbiór 
+	$ [0,3]\times[0,3] \subset \mathbb{R}^2 $, w którym można wprowadzić podział 
+	na dziewięć części izometrycznych z $ [0,1]^2 $. Wtedy odpowiednie izometrie 
+	prowadzą do konstrukcji torusa (rysunek).
+	%miejsce na rysuneczek torusa
+	\end{itemize}
+\end{example}
+
+\section{Własność A}
+
+Własność A jest pewnym przeniesieniem pojęcia średniowalności dla przestrzeni 
+metrycznych. Przed właściwym wprowadzeniem tego pojęcia przypomne kilka podstawowych 
+definicji dotyczących geometrii zgrubnej.
+
+Przez $ X,Y $ będziemy oznaczać przestrzenie metryczne, $ d $ będzie oznaczać metrykę 
+pochodzącą z przestrzeni, z której pochodzą jej argumenty. Jeśli będzie to konieczne, 
+przez $ d_X, d_Y $ będziemy dla ścisłości oznaczać metryki pochodzące odpowiednio z $ X $ 
+i $ Y $.
+
+\begin{definition}
+	Powiemy, że funkcja $ \varphi: X \rightarrow Y $ jest \textbf{zgrubna}, jeśli 
+	spełnia następujące dwa warunki:
+	\begin{itemize}
+	\item (\textit{Bornologiczność}) Dla każdego $ R > 0 $ istnieje $ S > 0 $ 
+	takie, że 
+	$$ d(x_1,x_2) < R \Rightarrow d \left( \varphi(x_1), \varphi(x_2)\right) < S $$
+	\item (\textit{Właściwość}) Dla każdego $ S > 0 $ istnieje $ R > 0 $ takie, że 
+	$$ d\left(\varphi(x_1), \varphi(x_2)\right) < S \Rightarrow d(x_1,x_2) < R $$
+	\end{itemize}
+\end{definition}
+
+\begin{example}
+	Zanurzenie $ \mathbb{Z} \hookrightarrow \mathbb{R} $ jest zgrubne. Każde 
+	przekształcenie liniowe $ \mathbb{Z} \rightarrow \mathbb{Z}, ~ n \rightarrow
+	an + b$ jest zgrubne. Przekształcenie $ \mathbb{Z} \ni n \rightarrow n^2 \in 
+	\mathbb{Z} $ nie jest zgrubne, bo nie jest bornologiczne ($ d(n, n+1) = 1 $, a 
+	$ d(n^2, n^2 + 2n + 1) = |2n+1| $ jest dowolnie duże).
+\end{example}
+
+Powiemy, że dwa przekształcenia $ f_1, f_2 : X \rightarrow Y $ są blisko, 
+jeśli istnieje $ C > 0 $ takie, że $$ d(f_1(x), f_2(x)) < C  ~ \text{dla każdego } x \in X$$ 
+Zbiór $ A \subset X $ jest $ r $-gęsty, jeśli dla każdego $ x \in X $ istnieje 
+element $ a \in A $ taki, że $ d(x,a) < r $. Zbiór $ A $ jest zgrubnie gęsty, jeśli 
+jest $ r $-gęsty dla pewnego $ r > 0 $.
+
+\begin{definition}
+	Powiemy, że przestrzenie $ X,Y $ są \textbf{zgrubnie równoważne}, jeśli 
+	istnieją przekształcenia zgrubne $ \varphi : X \rightarrow Y, 
+	~ \psi : Y \rightarrow X  $ takie, że 
+	$ \varphi \circ \psi $ jest blisko $ \text{id}_Y $, zaś $ \psi \circ \varphi $ jest blisko 
+	$ \text{id}_X $. Przestrzenie $ X,Y $ są zgrubnie równoważne wtedy i tylko wtedy, gdy 
+	istnieje $ \varphi : X \rightarrow Y $ takie, że $ \varphi(X) \subset Y $ jest 
+	podzbiorem zgrubnie gęstym.
+\end{definition}
+
+\begin{remark}
+	Każda przestrzeń metryczna $ X $ zawiera dyskretny podzbiór zgrubnie gęsty.
+\end{remark}
+\begin{proof}
+	Ustalmy $ \varepsilon > 0 $. Niech $ \mathcal{D} = \{D \subset X : \forall_{x_1, x_2 \in D, ~
+	x_1 \neq x_2} ~ d(x_1, x_2) > \varepsilon \} $. Rodzina $ \mathcal{D} $ jest niepusta 
+	oraz każdy łańcuch jest ograniczony z góry przez swoją sumę. Wobec lematu Kuratowskiego-
+	Zorna istnieje więc maksymalny element $D_0 \in \mathcal{D}$. Jest on $ \varepsilon $-
+	gęstym podzbiorem $ X $. Istotnie, załóżmy przeciwnie - istnieje $ x \in X $ taki, że 
+	$ d(x, D_0) > \varepsilon $. Wtedy zbiór $ D_0 \cup \{x\} $ należy do rodziny 
+	$ \mathcal{D} $ i zawiera w sobie $ D_0 $, co przeczy maksymalności $ D_0 $
+\end{proof}
+
+\begin{definition}
+
+\end{definition}
+
 \end{document}
