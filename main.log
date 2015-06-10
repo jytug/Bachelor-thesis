@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  10 JUN 2015 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  11 JUN 2015 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,18 +502,18 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.424 $ x,y $ są 
+l.429 $ x,y $ są 
                    \textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśl...
 
 ? 
 
-Overfull \hbox (5.66475pt too wide) in paragraph at lines 422--426
+Overfull \hbox (5.66475pt too wide) in paragraph at lines 427--431
 \OT4/cmr/m/n/10.95 wszyst-kie s� nie-pu-ste, to hi-per-p�asz-czy-zny \OT4/cmr/b
 x/n/10.95 prze-ci-na-j� si�\OT4/cmr/m/n/10.95 . Dwa wierz-cho�-ki $\OML/plm/m/i
 t/10.95 x; y$ \OT4/cmr/m/n/10.95 s�\OT4/cmr/bx/n/10.95 oddzielone
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 428.
+LaTeX Font Info:    Try loading font information for U+euf on input line 433.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [11]
@@ -524,7 +524,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.436 ...$ \text{CAT(0)}~ X$ możemy wprowadzić 
+l.441 ...$ \text{CAT(0)}~ X$ możemy wprowadzić 
                                                   brzeg kombinatoryczny.
 ? 
 
@@ -534,16 +534,83 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.437 ... $ X $ jedną z wyznaczonych przez nią 
+l.442 ... $ X $ jedną z wyznaczonych przez nią 
                                                   
 ? 
-[12] (./main.aux) ) 
+
+Overfull \hbox (0.44728pt too wide) in paragraph at lines 458--467
+[]\OT4/cmr/m/n/10.95 Mo�emy prze-nie�� pod-sta-wo-we kom-bi-na-to-rycz-ne w�a-s
+no-�ci kom-plek-su kost-ko-we-go $[]$
+ []
+
+[12]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 507.
+
+
+! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.544 ... $. Z poprzedniego lematu wynika więc, 
+                                                  że $ m \in [x,z_j] $ dla
+? 
+[13]
+Overfull \hbox (6.06036pt too wide) in paragraph at lines 591--594
+\OT4/cmr/bx/n/10.95 Twierdzenie 1.3.1. \OT4/cmr/m/it/10.95 Niech $\OML/plm/m/it
+/10.95 X$ \OT4/cmr/m/it/10.95 b�-dzie sko�-cze-nie wy-mia-ro-wym kom-plek-sem k
+ost-ko-wym $[]$,
+ []
+
+
+! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.600 ...zny $H,K \in \mathfrak{H}(x,y)$ nie są 
+                                                  porównywalne w tym
+? 
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 654.
+
+[14]
+
+! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.673 Z powyższej definicji łatwo udowodnić 
+                                                kilka własności:
+? 
+
+! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.680 ... $ k = -1 $. Przyjmuje wtedy ona formę 
+                                                  
+? 
+[15] [16
+
+]
+Rozdzia\PlPrIeC {\l } 2.
+[17] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 1815 strings out of 494985
- 20530 string characters out of 6180449
- 74967 words of memory out of 5000000
- 5003 multiletter control sequences out of 15000+600000
- 29504 words of font info for 91 fonts, out of 8000000 for 9000
+ 1827 strings out of 494985
+ 20674 string characters out of 6180449
+ 76967 words of memory out of 5000000
+ 5012 multiletter control sequences out of 15000+600000
+ 31766 words of font info for 98 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  27i,12n,26p,219b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{
@@ -566,10 +633,10 @@ st/fonts/type1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/pl/plsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy6.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on main.pdf (14 pages, 156174 bytes).
+Output written on main.pdf (19 pages, 179775 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 148 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

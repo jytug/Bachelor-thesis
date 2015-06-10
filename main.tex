@@ -419,6 +419,11 @@ drogowo spójne podzbiory zbioru wierzchołków. Taki podział nazwiemy
 \textbf{hiperpłaszczyzną}, zaś oba 
 spójne podzbiory nazwiemy \textbf{półprzestrzenią}. 
 
+%CO ZA DEBIL TO PISAŁ!!!!
+%
+%Trzeba wpisać dobrą definicję hiperpłaszczyzny
+%
+
 Dwie hiperpłaszczyzny tworzą podział kompleksu na cztery przecięcia półpłaszczyzn. Jeśli 
 wszystkie są niepuste, to hiperpłaszczyzny \textbf{przecinają się}. Dwa wierzchołki 
 $ x,y $ są \textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
@@ -450,12 +455,231 @@ ultrafiltr $ \iota(x) $, możemy więc zdefiniować
 $$ \overline{X} = X \cup \partial X $$
 Powyższy zbiór nazwiemy \textbf{dopełnieniem w nieskończoności} kompleksu $ X $.
 
-Możemy przenieść podstawowe kombinatoryczne własności kompleksu kostkowego $ \textbf{CAT()}$ 
+Możemy przenieść podstawowe kombinatoryczne własności 
+kompleksu kostkowego $ \text{CAT(0)}$ 
 na jego dopełnienie w nieskończoności. Jeśli $ z,w \in \overline{X} $, to dla 
-hiperpłaszczyzny $ H $ przez $ H_z, H_w $ będziemy oznaczać obraz $ z,w $ (jako ultrafiltrów) na 
+hiperpłaszczyzny $ H $ przez $ H_z, H_w $ będziemy oznaczać obraz $ z,w $ 
+(jako ultrafiltrów) na 
 $ H $, a więc odpowiednią półprzestrzeń (wtedy powiemy, że $ H_z $ zawiera $ z $. 
 Hiperpłaszczyzna $ H $ \textbf{oddziela} $ x $ od $ w $, 
 jeśli $ H_z \neq H_w $. Można więc na $ \overline{X} $ uogólnić definicję zbioru 
 $ \mathfrak{H}(x,w)$. Podobnie możemy zdefiniować odcinek $ [x,w] $ jako 
 $$ [x,w] = \bigcap H_{x,w}  ~~ x,w \in H_{x,w}, ~ H_{x,w} - \text{ półprzestrzeń}$$
+
+Zwróćmy uwagę, że każdy odcinek $ [x,w] $ jest wypukły. Wynika to stąd, że przecięcie 
+zbiorów wypukłych takie jest. Oczywiste jest również następujące stwierdzenie: 
+
+\begin{proposition}
+	Niech $ x,y,w \in X $ oraz $ x \in \overline{X} $. Jeśli $ w \in [x,z] $ oraz 
+	$ y \in [y,w] $, to $ \mathfrak{H}(y,w) \subset \mathfrak{H}(y,z)$
+\end{proposition}
+
+\begin{remark}
+	Na zbiorze $ \overline{X} $ trudno wprowadzić metrykę, można natomiast w naturalny 
+	sposób zrobić z niego przestrzeń topologiczną. Powiemy, że ciąg wierzchołków 
+	$ \{x_j\}_{j = 1}^{\infty} \subset X $ zbiega do wierzchołka $ x \in \overline{X} $, jeśli 
+	dla każdej hiperpłaszczyzny $ H $ zachodzi $ H \in \mathfrak{H}(x_j, x) $ jedynie 
+	dla skończenie wielu $ j $. Piszemy wówczas, że $$ x_j 
+	\xrightarrow{j \rightarrow \infty} x $$
+\end{remark}
+
+Sekcję tę zakończymy serią lematów i twierdzeniem łączącym kompleks 
+kostkowy z przestrzenią euklidesową.
+
+\begin{lemma}
+	Niech $ \{x_j\}_{j = 1}^{\infty} \subset X, x \in \overline{x} $ oraz niech 
+	$ x_j \rightarrow x$ przy $ j \rightarrow \infty $. Hiperpłaszczyzna $ H $ 
+	oddziela $ y $ od $ x $ wtedy i tylko wtedy, gdy oddziela $ y $ od prawie 
+	wszystkich\footnote{wszystkich, oprócz skończenie wielu} $ x_j $. Inaczej:
+	$$ \mathfrak{H}(y,x) = \bigcup\limits_{k = 1}^{\infty} \bigcap\limits_{j = k}^{\infty}
+	\mathfrak{H}(y,x_j) $$
+\end{lemma}
+\begin{proof}
+	Wystarczy wspomnieć definicję: $ H $ oddziela $ y $ od $ x $ wtedy i tylko wtedy, gdy 
+	$ H_y \neq H_z $, a więc wtedy i tylko wtedy, gdy $H_y \neq H_{x_j} $ dla prawie 
+	wszystkich $ j \in \mathbb{N} $. 
+\end{proof}
+\begin{lemma}
+	Niech $ \{x_j\}_{j = 1}^{\infty} \subset X, x \in \overline{X} $ oraz niech 
+	$ x_j \rightarrow x$ przy $ j \rightarrow \infty $. Ponadto niech $ y,z \in X $. 
+	Wówczas jeden \underline{i tylko jeden} z poniższych warunków jest prawdziwy.
+	\begin{itemize}
+		\item $ y \in [z,x_j] $ dla prawie wszystkich $ j \in \mathbb{N} $
+		(wtedy $ y \in [z,x]$).
+		\item $ y \notin [z,x_j] $ dla prawie wszystkich $ j \in \mathbb{N} $
+		(wtedy $ y \notin [z,x] $).
+	\end{itemize}
+\end{lemma}
+\begin{proof}
+	Negacją warunku pierwszego jest warunek: $ y \notin [z,x_j] $ dla nieskończenie 
+	wielu $ j \in \mathbb{N} $. Wynika on łatwo z drugiego warunku. Pokażemy, że warunek 
+	drugi jest mu równoważny.
+	
+	Jeśl $ y \notin [z,x_j]  $, to istnieje $ H \in \mathfrak{H}(y,z) $ taka, że 
+	$ H_z = H_{x_j} $. %%whyyyyyyy.
+	Jeśli jest tak dla nieskończenie wielu $ j $, to ze skończoności zbioru 
+	$ \mathfrak{H}(y,z) $ wynika, że istnieje hiperpłaszczyzna 
+	$ H \in \mathfrak{H}(y,z)$ taka, że $ H_{z} = H_{x_j} $ dla nieskończenie wielu $ j \in 
+	\mathbb{N} $. Zatem $ H_z = H_x = H_{x_j} $ dla prawie wszystkich $ j \in \mathbb{N} $. 
+	W szczególności $ y \notin [z,x_j] $ dla niemal wszystkich $ j $, a więc 
+	$ y \notin [z,x] $.
+	
+	Pozostaje wykazać, że pierwszy warunek pociąga za sobą, że $ y \in [z,x] $.
+	Załóżmy że $ y \notin [z,x] $. Istnieje więc hiperpłaszczyzna  
+	$ H \in \mathfrak{H}(y,z) $ taka, że $ H_x = H_z $, a więc $ H_{x_j} = H_{z} $ dla 
+	niemal wszystkich $ j \in \mathbb{N} $. A więc $ y \notin [z,x_j] $ dla 
+	prawie wszystkich $ j \in \mathbb{N} $ i otrzymujemy sprzeczność.
+\end{proof}
+
+\begin{lemma}
+	Niech $ x,y \in X $ oraz $ z \in \overline{X} $. Wówczas przecięcie odcinków 
+	$ [x,y], [x,z], [y,z] $ składa się z pojedynczego wierzchołka z $ X $.
+\end{lemma}
+\begin{proof}
+	Najpierw wykażemy, że przecięcie to jest niepuste, następnie - że ma tylko jeden element.
+
+	Niech $ \{z_j\}_{j = 1}^{\infty} \subset X $ będzie ciągiem wierzchołków zbieżnym 
+	do $ z $. Odcinek $[x,y] $ jest skończony i zawiera mediany $ m_j = m(x,y,z_j) $. 
+	Istnieje więc $ m \in [x,y] $ taki, że $ m = m_j \in [x,z_j] $ dla nieskończenie 
+	wielu $ j \in \mathbb{N} $. Z poprzedniego lematu wynika więc, że $ m \in [x,z_j] $ dla 
+	niemal wszystkich $ j \in \mathbb{N} $ oraz $ m \in [x,z] $. Podobnie $ m \in [y,z] $.
+
+	Załóżmy teraz, że $ m \neq m' $ należą do $ [x,y] \cap [x,z] \cap [y,z] $ i niech 
+	$ H \in \mathfrak{H}(m,m') $. Któreś dwie z półprzestrzenie $ H_x, H_y, H_z $ są 
+	sobie równe; dla ustalenia uwagi niech $ H_x = H_y $. Skoro $ H_m \neq H_{m'} $, 
+	tylko jedno z nich może być równe $ H_x $, zatem znowu dla ustalenia uwagi niech 
+	$ H_m \neq H_x $. Wtedy $ m \notin [x,z] $, co daje sprzeczność.
+\end{proof}
+
+\begin{remark}
+	W powyższym dowodzie skorzystaliśmy z faktu, że mamy ciąg $X \ni z_j \rightarrow z \in 
+	\overline{X}$. 
+	Istnienie takiego ciągu nie jest zupełnie oczywiste - aby je uzasadnić, należy 
+	rozważyć zbiór wszystkich hiperpłaszczyzn $ H_1, H_2, \dots $ (jest on przeliczalny) 
+	oraz dla każdego $ j \in \mathbb{N}$ wybrać $ z_j $ należące do zbioru
+	$$ \bigcap\limits_{i=1}^j (H_i)_z $$
+	
+	Aby uzasadnić, że powyższy zbiór jest niepusty, wystarczy skorzystać z twierdzenia 
+	Helly'ego mówiącego o przecięciach zbiorów wypukłych. %rol98, Helly's theorem
+\end{remark}
+Dla $ x \in X, z \in \overline{X} $ przez $ \mathfrak{R}_z(x) $ oznaczymy 
+podzbiór $ \mathfrak{H}(x,z) $ złożony z tych hiperpłaszczyzn, które oddzielają 
+$x $ od $ z $ oraz pewnego sąsiada $ x $. 
+\begin{lemma}
+	Niech $ X $ będzie kompleksem kostkowym $ \text{CAT(0)} $ oraz $ \dim{X} < \infty $. 
+	Ponadto niech $ x \in X, z \in \overline{X} $.
+	Wówczas $ \# \mathfrak{R}_z(x) \leq \dim{X}$
+\end{lemma}
+\begin{proof}
+	Dowód można znaleźć w (BCGNW)
+	 lemat 1.13
+\end{proof}
+
+W następnym twierdzeniu uzasadnimy, że odcinki łączące wierzchołki (być może 
+w nieskończoności) zanurzają się w odpowiednio dużą przestrzeń euklidesową. W oczywisty 
+sposób $ \mathbb{R}^d $ możemy postrzegać jako kompleks kostkowy (patrz przykład 1.3.1). 
+Zbiorem wierzchołków jest krata $ \mathbb{Z}^d $. Odcinkami są prostopadłościany - 
+dokładniej, jeśli 
+$ \overline{x} = (x_1, \dots, x_d), \overline{y} = (y_1, \dots, y_d)  \in\mathbb{Z}^d $, 
+to odcinkiem $ [\overline{x}, \overline{y}] $ jest powłoka wypukła podzbioru $ \mathbb{Z}^d$ 
+złożonego z tych liczb, których $ i $-ta współrzędna jest z przedziału $ [x_i, y_i] $ lub
+$ [y_i, x_i] $.
+Żeby włączyć do naszych rozważań wierzchołki w nieskończoności, dopuszczamy możliwość, że 
+$ x_i  $ lub $ y_i = \pm \infty $ dla pewnego $ i = 1 \dots d$.
+
+\begin{theorem} \label{thm:zanurzanie}
+	Niech $ X $ będzie skończenie wymiarowym kompleksem kostkowym $ \text{CAT(0)} $, 
+	$ \dim{X} = d $ oraz niech $ x,y \in \overline{X} $. Wówczas odcinek $ [x,y] $ zanurza 
+	się izometrycznie w kompleksie kostkowym $ \mathbb{R}^d $.
+\end{theorem}
+
+Wprowadźmy na zbiorze $ \mathfrak{H}(x,y) $ częściowy porządek w następujący sposób:
+$$ H \preceq K \iff H_x \subset K_x $$
+
+\begin{lemma}
+	Dwie płaszczyzny $H,K \in \mathfrak{H}(x,y)$ nie są porównywalne w tym 
+	porządku wtedy i tylko wtedy, gdy się przecinają.
+\end{lemma}
+\begin{proof}
+	Oczywiste jest, że $ H_x \cap K_x \neq \emptyset \neq H_y \cap K_y $. Dalej, 
+	$ H_x \cap K_y = \emptyset \iff H_x \subset K_x  \wedge H_y \cap K_x = \emptyset \iff
+	K_x \subset H_x$. $ H $ oraz $ K $ są więc nieporównywalne przez $ \preceq $ wtedy 
+	i tylko wtedy, gdy $ K_x \not\subset H_x $ oraz $ H_x \not\subset K_x $, a więc 
+	wtedy, gdy wszystkie cztery przecięcia są niepuste.
+\end{proof}
+
+\begin{lemma}[Dilworth]
+	Niech $ (S, \preceq) $ będzie zbiorem częściowo uporządkowanym. Łańcuchem nazwiemy 
+	podzbiór $S $, 
+	którego elementy są parami porównywalne, antyłańcuchem - podzbiór $ S $ nieposiadający 
+	dwóch różnych elementów porównywalnych. Jeśli zbiór $ S $ nie zawiera antyłańcucha 
+	o mocy $ m + 1 $, to $ S $ jest sumą rozłączną $ m $ łańcuchów.
+\end{lemma}
+\begin{proof}
+	Można znaleźć w (Dilworth, a decomposition theorem for partially ordered sets).
+\end{proof}
+\begin{corollary}
+	Zbiór częściowo uporządkowany $ \left(\mathfrak{H}(x,y), \preceq \right) $ 
+	jest sumą rozłączną $ d $ 
+	łańcuchów.	
+\end{corollary}
+\begin{proof}
+	Wystarczy skorzystać z twierdzenia Helly'ego, lematu Dilwortha oraz 
+	lematu 1.3.5 
+\end{proof}
+\begin{proof}[Dowód twierdzenia 1.3.1]
+	Dowód tego twierdzenia przeprowadzimy tylko dla przypadku, gdy $ x $ jest 
+	wierzchołkiem $ X $. Weźmy rozkład zbioru $ \mathfrak{H}(x,y)$ na łańcuchy, którego 
+	istnienia dostarcza poprzedni lemat
+	 $$ \mathfrak{H}(x,y) = \bigsqcup\limits_{i=1}^{d} \mathfrak{B}_i  $$
+	Niech teraz 
+	$$ X \supset [x,y] \ni z \rightarrow \overline{z} = (\overline{z_1}, \dots, 
+	\overline{z_d}) \in \mathbb{Z}^d, ~ \overline{z_i} = \# \{H \in \mathfrak{B}_i: ~ 
+	z \in H_y\} $$
+
+	Wówczas $ \overline{x} = 0$, zaś $ \overline{y} = (\overline{y_1}, \dots, 
+	\overline{y_d}) $, gdzie $ \overline{y_i} = \# \mathfrak{B}_i, i = 1 \dots d$. 
+	Dla każdego $ z \in [x,y] $ współrzędne $ \overline{z} $ są skończone oraz 
+	$ \overline{z} \in [\overline{x}, \overline{y}] $.
+
+	Funkcja $ z \rightarrow \overline{z} $ zanurzeniem izometrycznym. Żeby to sprawdzić, 
+	wystarczy obliczyć:
+	$$ d(\overline{v}, \overline{w}) = \sum\limits_{i=1}^d \# \{ 
+	H \in \mathfrak{B}_i: ~ H \in \mathfrak{H}(v,w) \} = \# \mathfrak{H}(v,w) = 
+	d(v,w)$$
+\end{proof}
+
+\section{Kombinacje}
+Funkcje, spełniające warunki Stwierdzenia 1.1.1. będziemy konstruować przy 
+użyciu dwumianu Newtona, a więc funkcji $ {n \choose k} $. Kombinatorycznie funkcja ta 
+oznacza \textit{liczbę $ k $-podzbiorów $ n $-zbioru}, w szczególności jej definicja jest 
+poprawna dla całkowitych $ n \geq k \geq 0 $. Przy użyciu łatwej interpretacji 
+kombinatorycznej można udowodnić relację rekurencyjną:
+
+\begin{itemize}
+	\item $ {n \choose 0} = {n \choose n} = 1 $ dla $ n \geq 0 $.
+	\item $ {n \choose k} = {n-1 \choose k-1} + {n-1 \choose k} $
+\end{itemize}
+
+Można łatwo uogólnić tę funkcję dla wszystkich $ n,k \in \mathbb{Z} $ poprzez relację:
+
+\begin{itemize}
+	\item $ {n \choose 0} = 1  $ dla $ n \geq 0$ oraz $ {n \choose n} = 1  $ dla 
+	$ n \in \mathbb{Z}$
+	\item $ {n \choose k} = {n -1 \choose k-1} + {n-1 \choose k} $ dla wszystkich $ n,k \in
+	\mathbb{Z} $
+\end{itemize}
+
+Z powyższej definicji łatwo udowodnić kilka własności:
+
+\begin{itemize}
+	\item ${n \choose k} = 0$ dla $ k < 0 \leq n $
+	\item $ {n \choose k} = (-1)^{n+k}{-1-r \choose -1-n} $
+\end{itemize}
+
+Szczególnie przydatna okaże się druga własność, dla $ k = -1 $. Przyjmuje wtedy ona formę 
+$$ {n \choose -1} = (-1)^{n-1} {0 \choose -1-n} $$
+
+\chapter{Kompleksy kostkowe $ \text{CAT(0)} $ a własność A}
+
 \end{document}
