@@ -87,6 +87,154 @@ twierdzeń i przykładów dotyczących jej tematu. Aby zachować ciągłość pr
 postaram się uniknąć przytaczania rozległych dowodów. Dla zainteresowanych 
 w odpowiednich miejscach znajdą się odsyłacze do literatury.
 
+\section{Własność A}
+
+Własność A jest pewnym przeniesieniem pojęcia średniowalności na przestrzenie metryczna. 
+Przed właściwym wprowadzeniem tego pojęcia przypomne kilka podstawowych 
+definicji dotyczących geometrii zgrubnej.
+
+Przez $ X,Y $ będziemy oznaczać przestrzenie metryczne, $ d $ będzie oznaczać metrykę 
+pochodzącą z przestrzeni, z której pochodzą jej argumenty. Jeśli będzie to konieczne, 
+przez $ d_X, d_Y $ będziemy dla ścisłości oznaczać metryki pochodzące odpowiednio z $ X $ 
+i $ Y $.
+
+\begin{definition}
+	Powiemy, że funkcja $ \varphi: X \rightarrow Y $ jest \textbf{zgrubna}, jeśli 
+	spełnia następujące dwa warunki:
+	\begin{itemize}
+	\item (\textit{Bornologiczność}) Dla każdego $ R > 0 $ istnieje $ S > 0 $ 
+	takie, że 
+	$$ d(x_1,x_2) < R \Rightarrow d \left( \varphi(x_1), \varphi(x_2)\right) < S $$
+	\item (\textit{Właściwość}) Dla każdego $ S > 0 $ istnieje $ R > 0 $ takie, że 
+	$$ d\left(\varphi(x_1), \varphi(x_2)\right) < S \Rightarrow d(x_1,x_2) < R $$
+	\end{itemize}
+\end{definition}
+
+\begin{example}
+	Zanurzenie $ \mathbb{Z} \hookrightarrow \mathbb{R} $ jest zgrubne. Każde 
+	przekształcenie liniowe $ \mathbb{Z} \rightarrow \mathbb{Z}, ~ n \rightarrow
+	an + b$ jest zgrubne. Przekształcenie $ \mathbb{Z} \ni n \rightarrow n^2 \in 
+	\mathbb{Z} $ nie jest zgrubne, bo nie jest bornologiczne ($ d(n, n+1) = 1 $, a 
+	$ d(n^2, n^2 + 2n + 1) = |2n+1| $ jest dowolnie duże).
+\end{example}
+
+Powiemy, że dwa przekształcenia $ f_1, f_2 : X \rightarrow Y $ są blisko, 
+jeśli istnieje $ C > 0 $ takie, że $$ d(f_1(x), f_2(x)) < C  ~ \text{dla każdego } x \in X$$ 
+Zbiór $ A \subset X $ jest $ r $-gęsty, jeśli dla każdego $ x \in X $ istnieje 
+element $ a \in A $ taki, że $ d(x,a) < r $. Zbiór $ A $ jest zgrubnie gęsty, jeśli 
+jest $ r $-gęsty dla pewnego $ r > 0 $.
+
+\begin{definition}
+	Powiemy, że przestrzenie $ X,Y $ są \textbf{zgrubnie równoważne}, jeśli 
+	istnieją przekształcenia zgrubne $ \varphi : X \rightarrow Y, 
+	~ \psi : Y \rightarrow X  $ takie, że 
+	$ \varphi \circ \psi $ jest blisko $ \text{id}_Y $, zaś $ \psi \circ \varphi $ jest blisko 
+	$ \text{id}_X $. Przestrzenie $ X,Y $ są zgrubnie równoważne wtedy i tylko wtedy, gdy 
+	istnieje $ \varphi : X \rightarrow Y $ takie, że $ \varphi(X) \subset Y $ jest 
+	podzbiorem zgrubnie gęstym.
+\end{definition}
+
+\begin{remark}
+	Każda przestrzeń metryczna $ X $ zawiera dyskretny podzbiór zgrubnie gęsty.
+\end{remark}
+\begin{proof}
+	Ustalmy $ \varepsilon > 0 $. Niech $ \mathcal{D} = \{D \subset X : \forall_{x_1, x_2 \in D, ~
+	x_1 \neq x_2} ~ d(x_1, x_2) > \varepsilon \} $. Rodzina $ \mathcal{D} $ jest niepusta 
+	oraz każdy łańcuch jest ograniczony z góry przez swoją sumę. Wobec lematu Kuratowskiego-
+	Zorna istnieje więc maksymalny element $D_0 \in \mathcal{D}$. Jest on $ \varepsilon $-
+	gęstym podzbiorem $ X $. Istotnie, załóżmy przeciwnie - istnieje $ x \in X $ taki, że 
+	$ d(x, D_0) > \varepsilon $. Wtedy zbiór $ D_0 \cup \{x\} $ należy do rodziny 
+	$ \mathcal{D} $ i zawiera w sobie $ D_0 $, co przeczy maksymalności $ D_0 $
+\end{proof}
+
+\begin{definition}
+	Przestrzeń dyskretna $ X $ ma \textbf{własność A}, jeśli dla każdego $ R>0 $ oraz 
+	$ \varepsilon > 0 $ istnieje rodzina niepustych, skończonych zbiorów $ A_x \subset 
+	X \times \mathbb{N} $ indeksowana $ x \in X $ oraz stała $ S > 0 $ taka, że 
+	spełnione są następujące warunki:
+	\begin{enumerate}
+		\item Dla każdych dwóch $ x,x' \in X $ zachodzi
+		$$ d(x,x') < R \Rightarrow \frac{\# (A_x \Delta A_{x'})}{\# A_x} < \varepsilon$$
+		\item Dla dowolnego elementu $(x', n) \in A_x$ zachodzi $$ d(x,x') \leq S $$
+	\end{enumerate}
+	Dowolna przestrzeń metryczna ma własność A, jeśli zawiera zgrubnie gęsty podzbiór 
+	o tej własności.
+\end{definition}
+Symbol $ \# $ oznacza liczbę elementów zbioru, zaś symbol $ \Delta $ - operację 
+różnicy symetrycznej (a więc $A \Delta B = (A \setminus B) \cup (B \setminus A)$)
+
+
+\begin{remark}
+	Własność A jest niezmiennikiem zgrubnej równoważności przestrzeni dyskretnych. 
+	Dokładniej, jeśli przestrzenie dyskretne $ X,Y $ są zgrubnie równoważne, to 
+	$ X $ ma własność A wtedy i tylko wtedy, gdy $ Y $ ma własność A.
+\end{remark}
+
+Uwaga ta jest bezpośrednią konsekwencją poniższego lematu:
+
+\begin{lemma}
+	Jeśli $ \varphi: X \rightarrow Y $ jest przekształceniem zgrubnym przestrzeni dyskretnych 
+	oraz $ Y $ ma własność A, to $ X $ ma własność A.
+\end{lemma}
+\begin{proof}
+	Łatwo sprawdzić, że istnieje funkcja $\psi: Y \rightarrow X $ taka, że
+	$$ d(y, \varphi(\psi(y)))  \leq d(y,  \varphi(X)) \text{ dla każdego } y \in Y$$
+	W tym celu wystarczy dla każdego $ y \in Y $ wybrać $ x \in X $ taki, że 
+	$ \varphi(x) $ jest odpowiednio blisko $ y $ i ustalić $ x = \psi(y) $.
+
+	Ustalmy teraz $ R > 0,~  \varepsilon > 0 $. Przekształcenie $\varphi$ jest zgrubne, zatem 
+	istnieje $ R_0 $ takie, że $$ d(x,x') < R \Rightarrow d(\varphi(x), \varphi(x')) < R_0 $$ 
+	Dla stałych $ R_0, \varepsilon $ istnieje rodzina 
+	$ \{B_y \subset Y \times \mathbb{N}\}_{y \in Y} $ 
+	indeksowana $ y \in Y $ oraz stała $S'$ spełniającaewarunki definicji własności $ A $.
+ 	 Zdefiniujmy 
+	teraz 
+	$$ X \times \mathbb{N} \supset A_x = \{(x', n): ~ n \leq \# \{ (y,m) \in B_{\varphi(x)} : ~
+	\psi(y) = x' \}\} $$
+
+	Sprawdzimy, że rodzina ta spełnia warunki definicji 1.3.3. Jeśli 
+	$ d(x,x') < R $, to $ d(\varphi(x), \varphi(x')) < R' $, a więc 
+	$$ \frac{\# (A_x \Delta A_{x'})}{\# A_x} \leq \frac{\# B_{\varphi(x)} \Delta 
+	B_{\varphi(x')}}{\# B_{\varphi(x)}} < \varepsilon $$
+
+	Załóżmy wreszcie, że $ (x', n) \in A_x $. Wówczas istnieje para $ (y,m) \in 
+	B_{\varphi(x)} $ taka, że $ \psi(y) = x' $. Wówczas $d(y,\varphi(x)) \leq S'$ oraz 
+	$$ d(\varphi(x), \varphi(x')) \leq d(\varphi(x),y) + d(y,\varphi(x')) = d(\varphi(x),y) + 
+	d(y, \varphi(\psi(y))) \leq 2S' + 1 $$
+
+	Korzystając znów ze zgrubności $\varphi$, możemy znaleźć stałą $ S $ taką, aby 
+	$$ d(\varphi(x), \varphi(x')) < 2S' +1 \Rightarrow d(x,x') < S $$
+	Otrzymujemy więc, że $ d(x,x') < S $, co kończy dowód.
+\end{proof}
+
+W dalszych rozważaniach będziemy korzystać z następującej charakteryzacji własności A:
+
+\begin{proposition}
+	Dyskretna przestrzeń metryczna $ X $ ma własność A wtedy i tylko wtedy, gdy 
+	istnieje ciąg rodzin funkcji o skończonym nośniku $ f_{n,x} : X \rightarrow \mathbb{N}
+	\cup \{0\} $, indeksowany $ x \in X $, oraz ciąg $ S_n \in \mathbb{R}_{+} $ taki, że
+	\begin{enumerate}
+		\item Dla każdego $ n $ oraz $ x $ nośnikiem $ f_{n,x} $ jest $ B(S_n, x) $.
+		\item Dla każdego $ R > 0 $ ciąg $$ \frac{\| f_{n,x} - f_{n,x'} \|}{\| f_{n,x} \|} $$
+		zbiega jednostajnie do zera na zbiorze $ \{ (x,x'): ~ d(x,x') \leq R\} $ przy 
+		$ n \rightarrow \infty $. Norma $ \| \cdot \| $ oznacza normę $ \ell_1 $ na 
+		przestrzeni funkcji na o skończonym nośniku określonych na $ X $.
+	\end{enumerate}
+\end{proposition}
+\begin{proof}
+	Powyższe warunki są równoważne z następującym: dla każdego $ R>0, ~ \varepsilon > 0 $ 
+	istnieje rodzina funkcji o skończonym nośniku $ f_x : X \rightarrow \mathbb{N} \cup 
+	\{0\}$, indeksowana $ x \in X $, oraz $ S > 0 $ takie, że $ \text{supp}{f_x} = B(S,x)  $ 
+	oraz $$ d(x,x') \leq R \Rightarrow \frac{\| f_x - f_{x'} \|}{\|f_x \|} < \varepsilon $$
+
+	Konieczność tego warunku wynika stąd, że przekształcenie $ f_x(y) = \#\left( A_x \cap \left( 
+	\{y\} \times \mathbb{N} \right) \right) $ spełnia powyższe warunki, zaś dostateczność - 
+	stąd, iż $ A_x = \{(y,n) \in X \times \mathbb{N} : ~ 1 \leq n \leq f_x(y) \} $ spełnia 
+	warunki definicji 1.3.3.
+\end{proof}
+
+
+
 \section{Przestrzenie $\text{CAT(0)}$}
 Niech $ (X, d) $ będzie przestrzenią metryczną. Odcinkiem geodezyjnym nazywamy 
 przekształcenie izometryczne $ \mathbb{R} \supset I \xrightarrow{\rho} X $, gdzie 
@@ -192,6 +340,11 @@ przecięcie ścian o wyższym kowymiarze.
 	gdzie $ \sim $ dla każdego $ \varphi \in \mathcal{S} $ utożsamia dziedzinę $ \varphi $ 
 	z jego obrazem, to znaczy: $$ \{ x \sim \varphi(x) ~ | ~ \varphi \in \mathcal{S}, ~ 
 	x \in \text{dom}(\varphi) \} $$
+
+	Jeśli istnieje stała $ M > 0 $ taka, że dla każdego $  K  \simeq [0,1]^{n(K)}\in 
+	\mathcal{K} $ zachodzi $ n(K) < M $, to kompleks kostkowy $ X $ jest \textbf{skończenie 
+	wymiarowy}. Wtedy \textbf{wymiarem} tego kompleksu nazwiemy liczbę 
+	$$ \dim X = \max\limits_{K \in \mathcal{K}} n(K)$$
 \end{definition}
 
 \begin{remark}
@@ -203,18 +356,17 @@ przecięcie ścian o wyższym kowymiarze.
 	$$ l(\gamma) = \sup\limits_{a = t_0 \leq \dots \leq t_n = b} \sum\limits_{i=0}^{n-1}
 	d(\gamma(t_i), \gamma(t_{i+1})) $$
 \end{remark}
-
 \begin{proposition}
 	Z powyższej definicji łatwo wynikają następujące fakty:
 	\begin{itemize}
 	\item Obcięcie rzutowania $ p : \bigsqcup_{K \in \mathcal{K}} \rightarrow X$ do jednej 
-	kostki $ K \in \mathcal{K}$
+	kostki $ K \in \mathcal{K}$ jest iniekcją.
 	\item Niepuste przecięcie dwóch kostek jest ścianą obydwu.
 	\end{itemize}	
 \end{proposition}
 
 \begin{example}
-	Łatwo o kilka prostych przykładów:
+	Łatwo o kilka prostych przykładów kompleksów kostkowych:
 	\begin{itemize}
 	\item Rozważmy graf metryczny bez wierzchołków izolowanych, w którym każda krawędź ma 
 	długość 1. Każda krawędź jest izometryczna z $ [0,1] $, zaś sklejenia to
@@ -227,68 +379,83 @@ przecięcie ścian o wyższym kowymiarze.
 	\end{itemize}
 \end{example}
 
-\section{Własność A}
-
-Własność A jest pewnym przeniesieniem pojęcia średniowalności dla przestrzeni 
-metrycznych. Przed właściwym wprowadzeniem tego pojęcia przypomne kilka podstawowych 
-definicji dotyczących geometrii zgrubnej.
-
-Przez $ X,Y $ będziemy oznaczać przestrzenie metryczne, $ d $ będzie oznaczać metrykę 
-pochodzącą z przestrzeni, z której pochodzą jej argumenty. Jeśli będzie to konieczne, 
-przez $ d_X, d_Y $ będziemy dla ścisłości oznaczać metryki pochodzące odpowiednio z $ X $ 
-i $ Y $.
-
-\begin{definition}
-	Powiemy, że funkcja $ \varphi: X \rightarrow Y $ jest \textbf{zgrubna}, jeśli 
-	spełnia następujące dwa warunki:
-	\begin{itemize}
-	\item (\textit{Bornologiczność}) Dla każdego $ R > 0 $ istnieje $ S > 0 $ 
-	takie, że 
-	$$ d(x_1,x_2) < R \Rightarrow d \left( \varphi(x_1), \varphi(x_2)\right) < S $$
-	\item (\textit{Właściwość}) Dla każdego $ S > 0 $ istnieje $ R > 0 $ takie, że 
-	$$ d\left(\varphi(x_1), \varphi(x_2)\right) < S \Rightarrow d(x_1,x_2) < R $$
-	\end{itemize}
-\end{definition}
-
-\begin{example}
-	Zanurzenie $ \mathbb{Z} \hookrightarrow \mathbb{R} $ jest zgrubne. Każde 
-	przekształcenie liniowe $ \mathbb{Z} \rightarrow \mathbb{Z}, ~ n \rightarrow
-	an + b$ jest zgrubne. Przekształcenie $ \mathbb{Z} \ni n \rightarrow n^2 \in 
-	\mathbb{Z} $ nie jest zgrubne, bo nie jest bornologiczne ($ d(n, n+1) = 1 $, a 
-	$ d(n^2, n^2 + 2n + 1) = |2n+1| $ jest dowolnie duże).
-\end{example}
-
-Powiemy, że dwa przekształcenia $ f_1, f_2 : X \rightarrow Y $ są blisko, 
-jeśli istnieje $ C > 0 $ takie, że $$ d(f_1(x), f_2(x)) < C  ~ \text{dla każdego } x \in X$$ 
-Zbiór $ A \subset X $ jest $ r $-gęsty, jeśli dla każdego $ x \in X $ istnieje 
-element $ a \in A $ taki, że $ d(x,a) < r $. Zbiór $ A $ jest zgrubnie gęsty, jeśli 
-jest $ r $-gęsty dla pewnego $ r > 0 $.
-
-\begin{definition}
-	Powiemy, że przestrzenie $ X,Y $ są \textbf{zgrubnie równoważne}, jeśli 
-	istnieją przekształcenia zgrubne $ \varphi : X \rightarrow Y, 
-	~ \psi : Y \rightarrow X  $ takie, że 
-	$ \varphi \circ \psi $ jest blisko $ \text{id}_Y $, zaś $ \psi \circ \varphi $ jest blisko 
-	$ \text{id}_X $. Przestrzenie $ X,Y $ są zgrubnie równoważne wtedy i tylko wtedy, gdy 
-	istnieje $ \varphi : X \rightarrow Y $ takie, że $ \varphi(X) \subset Y $ jest 
-	podzbiorem zgrubnie gęstym.
-\end{definition}
 
 \begin{remark}
-	Każda przestrzeń metryczna $ X $ zawiera dyskretny podzbiór zgrubnie gęsty.
+	Na zbiorze wierzchołków można wprowadzić metrykę długości krawędziowej, gdzie 
+	odległość dwóch wierzchołków to minimum długości łączących ich ścieżek złożonych 
+	z krawędzi kompleksu (przez krawędź rozumiemy ścianę o wymiarze 1).
+	Z naszego punktu widzenia możemy utożsamić te metryki, z uwagi na następujący fakt:
 \end{remark}
+
+\begin{proposition}
+	Niech $ X $ będzie kompleksem kostkowym $ \text{CAT(0)}$. Metryka długości na 
+	zbiorze wierzchołków $ X $ jest zgrubnie równoważna z metryką długości krawędziowej.
+	Jeśli $ X $ jest skończenie wymiarowy, to zbiór wierzchołków z pierwszą bądź drugą z 
+	tych metryk jest sobie zgrubnie równoważny.
+\end{proposition}
 \begin{proof}
-	Ustalmy $ \varepsilon > 0 $. Niech $ \mathcal{D} = \{D \subset X : \forall_{x_1, x_2 \in D, ~
-	x_1 \neq x_2} ~ d(x_1, x_2) > \varepsilon \} $. Rodzina $ \mathcal{D} $ jest niepusta 
-	oraz każdy łańcuch jest ograniczony z góry przez swoją sumę. Wobec lematu Kuratowskiego-
-	Zorna istnieje więc maksymalny element $D_0 \in \mathcal{D}$. Jest on $ \varepsilon $-
-	gęstym podzbiorem $ X $. Istotnie, załóżmy przeciwnie - istnieje $ x \in X $ taki, że 
-	$ d(x, D_0) > \varepsilon $. Wtedy zbiór $ D_0 \cup \{x\} $ należy do rodziny 
-	$ \mathcal{D} $ i zawiera w sobie $ D_0 $, co przeczy maksymalności $ D_0 $
+%WTF?
+%	Na potrzeby dowodu przez $ d_1 $ oznaczymy metrykę długości, zaś przez $ d_2 $ - 
+%	metrykę długości krawędziowej. Niech 
+%	$$ x = x_0, x_1, x_2 \dots x_n = y$$
+%	będzie ciągiem wierzchołków na najkrótszej ścieżce krawędziowej łączącej $ x $ oraz $ y $.
+%	Wówczas
+%	$$ d_1(x,y) \leq \sum\limits_{i = 0}^{n-1} d_1(x_{i}, x_{i+1}) = n = d_2(x,y) $$
+%
+%	Odwrotnie, mając dwa wierzchołki $ x,y $ takie, że $ d_2(x,y) = k $, to odcinek 
+%	łączący $ x $ oraz $ y $ jest kompleksem kostkowym $ \text{CAT(0)} $, który 
+%	zanurza się jako podkompleks $ [0,1]^k $. Zanurzenie to jest izometrią ze względu na 
+%	$ d_2 $ kontrakcją ze względu na $ d_1 $. Obraz punktu $ x $ przy tym zanurzeniu 
+%	oznaczmy przez $ \tilde x $ i, nadużywając nieco notacji, przez $ d_1, d_2 $ oznaczmy 
+%	również odpowiednio metrykę długości oraz długości krawędziowej również w kostce 
+%	$ [0,1]^k$. Wtedy
+%	$$ d_2(x,y) = d_2(\tilde x, \tilde y) \sqrt{d_1(\tilde x, \tilde y)} \leq 
+%	\sqrt{d_1(x,y)} $$
 \end{proof}
 
-\begin{definition}
+Kompleksy kostkowe $ \text{CAT(0)} $ posiadają strukturę kombinatoryczną. Zbiór 
+wierzchołków drogowo spójnego kompleksu kostkowego $ \text{CAT(0)} $ można podzielić na dwa 
+drogowo spójne podzbiory zbioru wierzchołków. Taki podział nazwiemy 
+\textbf{hiperpłaszczyzną}, zaś oba 
+spójne podzbiory nazwiemy \textbf{półprzestrzenią}. 
 
-\end{definition}
+Dwie hiperpłaszczyzny tworzą podział kompleksu na cztery przecięcia półpłaszczyzn. Jeśli 
+wszystkie są niepuste, to hiperpłaszczyzny \textbf{przecinają się}. Dwa wierzchołki 
+$ x,y $ są \textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
+wyznaczonych przez nią półprzestrzeni. 
 
+Zbiór hiperpłaszczyzn oddzielających $ x $ od $ y $ będziemy oznaczać przez 
+$\mathfrak{H}(x,y)$. \textbf{Odcinkiem} łączącym $ x $ oraz $ y $ nazwiemy przecięcie 
+wszystkich półprzestrzeni zawierających obydwa te punkty i oznaczymy $ [x,y]$. Zbiór 
+wierzchołków $ V $ nazwiemy \textbf{wypukłym}, jeśli dla każdych $ x,y \in V $ również 
+$ [x,y] \subset V $.
+
+Dla trzech wierzchołków $ w,x,y $ możemy wyróżnić ich \textbf{medianę}, zdefiniowaną 
+jako jedyny wierzchołek należący do $ [w,x] \cap [x,y] \cap [w,y] $
+
+Dla kompleksu kostkowego $ \text{CAT(0)}~ X$ możemy wprowadzić brzeg kombinatoryczny. 
+Niech funkcja $ \sigma $ przypisuje hiperpłaszczyźnie $ X $ jedną z wyznaczonych przez nią 
+półprzestrzeni, przy czym dla każdych dwóch hiperpłaszczyzn $ H_1, H_2 $ zachodzi 
+$ \sigma(H_1) \cap \sigma(H_2) \neq \emptyset $. Taką funkcję nazwiemy \textbf{ultrafiltrem}.
+
+Wierzchołek $ x $ definiuje takie przekształcenie: dla hiperpłaszczyzny $ H $ wyznacza 
+półprzestrzeń $ H_x $ zawierającą $ x $ (rzeczywiście, dla każdych dwóch hiperpłaszczyzn 
+$ H,K $ mamy $ x \in H \cap K $). Jeśli więc oznaczymy przez $\mathfrak{U}$ zbiór wszystkich 
+ultrafiltrów na $ X $, zaś przez $ V (X) $ - zbiór wierzchołków $ X $, to wskazaliśmy iniekcję 
+$$ \iota : V(X) \rightarrow \mathfrak{U} $$
+
+Wówczas elementy zbioru $$ \partial X = \mathfrak{U} \setminus \iota(V(X)) $$
+nazwiemy \textbf{krawędziami w nieskończoności}. Utożsamiając z wierzchołkiem $ x $ 
+ultrafiltr $ \iota(x) $, możemy więc zdefiniować
+$$ \overline{X} = X \cup \partial X $$
+Powyższy zbiór nazwiemy \textbf{dopełnieniem w nieskończoności} kompleksu $ X $.
+
+Możemy przenieść podstawowe kombinatoryczne własności kompleksu kostkowego $ \textbf{CAT()}$ 
+na jego dopełnienie w nieskończoności. Jeśli $ z,w \in \overline{X} $, to dla 
+hiperpłaszczyzny $ H $ przez $ H_z, H_w $ będziemy oznaczać obraz $ z,w $ (jako ultrafiltrów) na 
+$ H $, a więc odpowiednią półprzestrzeń (wtedy powiemy, że $ H_z $ zawiera $ z $. 
+Hiperpłaszczyzna $ H $ \textbf{oddziela} $ x $ od $ w $, 
+jeśli $ H_z \neq H_w $. Można więc na $ \overline{X} $ uogólnić definicję zbioru 
+$ \mathfrak{H}(x,w)$. Podobnie możemy zdefiniować odcinek $ [x,w] $ jako 
+$$ [x,w] = \bigcap H_{x,w}  ~~ x,w \in H_{x,w}, ~ H_{x,w} - \text{ półprzestrzeń}$$
 \end{document}
