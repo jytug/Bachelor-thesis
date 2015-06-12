@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  11 JUN 2015 00:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  12 JUN 2015 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,6 +372,10 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip48
 \dth@everypar=\toks27
 )
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
 \c@definition=\count100
 \c@remark=\count101
 \c@proposition=\count102
@@ -383,71 +387,71 @@ Package: amsthm 2009/07/02 v2.20.1
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for OML+plm on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 65.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 66.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 65.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 66.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <24.88> on input line 65.
+(Font)              <24.88> on input line 66.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <20.74> on input line 65.
+(Font)              <20.74> on input line 66.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <17.28> on input line 65.
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+(Font)              <17.28> on input line 66.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 65.
+(Font)              <12> on input line 66.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 65.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 65.
+(Font)              <6> on input line 66.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 71.
+(Font)              <10.95> on input line 72.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 
  []
 
@@ -461,19 +465,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
 ] [4
 
-] [5] [6
+]
+LaTeX Font Info:    Try loading font information for U+bbold on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [5] [6
 
 ]
 Rozdzia\PlPrIeC {\l } 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
  [7]
-Overfull \hbox (21.6582pt too wide) in paragraph at lines 195--197
+Overfull \hbox (21.6582pt too wide) in paragraph at lines 214--216
 []\OT4/cmr/m/n/10.95 Sprawdzimy, »e ro-dzi-na ta speª-nia wa-run-ki de-fi-ni-cj
 i 1.3.3. Je-±li $\OML/plm/m/it/10.95 d\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 x
 ; x[]\OT4/cmr/m/n/10.95 ) \OML/plm/m/it/10.95 < R$\OT4/cmr/m/n/10.95 , to $\OML
@@ -484,159 +491,95 @@ OML/plm/m/it/10.95 x\OT4/cmr/m/n/10.95 )\OML/plm/m/it/10.95 ; '\OT4/cmr/m/n/10.
 
 [8]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 238.
+(Font)              <14.4> on input line 257.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 238.
+(Font)              <10> on input line 257.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 238.
+(Font)              <7> on input line 257.
  [9] [10]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <9> on input line 352.
+(Font)              <9> on input line 371.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 352.
+(Font)              <5> on input line 371.
 
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.429 $ x,y $ sÄ…Â 
-                   \textbf{oddzielone} przez hiperpÅ‚aszczyznÄ™ $ H $, jeÅ›l...
-
-? 
-
-Overfull \hbox (5.66475pt too wide) in paragraph at lines 427--431
+Overfull \hbox (5.66475pt too wide) in paragraph at lines 446--450
 \OT4/cmr/m/n/10.95 wszyst-kie s¡ nie-pu-ste, to hi-per-pªasz-czy-zny \OT4/cmr/b
 x/n/10.95 prze-ci-na-j¡ si¦\OT4/cmr/m/n/10.95 . Dwa wierz-choª-ki $\OML/plm/m/i
 t/10.95 x; y$ \OT4/cmr/m/n/10.95 s¡\OT4/cmr/bx/n/10.95 oddzielone
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 433.
+LaTeX Font Info:    Try loading font information for U+euf on input line 452.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [11]
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.441 ...$ \text{CAT(0)}~ X$ moÅ¼emy wprowadziÄ‡Â 
-                                                  brzeg kombinatoryczny.
-? 
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.442 ... $ X $ jednÄ… z wyznaczonych przez niÄ…Â 
-                                                  
-? 
-
-Overfull \hbox (0.44728pt too wide) in paragraph at lines 458--467
+Overfull \hbox (0.44728pt too wide) in paragraph at lines 477--486
 []\OT4/cmr/m/n/10.95 Mo»emy prze-nie±¢ pod-sta-wo-we kom-bi-na-to-rycz-ne wªa-s
 no-±ci kom-plek-su kost-ko-we-go $[]$
  []
 
 [12]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 507.
-
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.544 ... $. Z poprzedniego lematu wynika wiÄ™c,Â 
-                                                  Å¼e $ m \in [x,z_j] $ dla
-? 
-[13]
-Overfull \hbox (6.06036pt too wide) in paragraph at lines 591--594
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 526.
+ [13]
+Overfull \hbox (6.06036pt too wide) in paragraph at lines 610--613
 \OT4/cmr/bx/n/10.95 Twierdzenie 1.3.1. \OT4/cmr/m/it/10.95 Niech $\OML/plm/m/it
 /10.95 X$ \OT4/cmr/m/it/10.95 b¦-dzie sko«-cze-nie wy-mia-ro-wym kom-plek-sem k
 ost-ko-wym $[]$,
  []
 
 
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.600 ...zny $H,K \in \mathfrak{H}(x,y)$ nie sÄ…Â 
-                                                  porÃ³wnywalne w tym
-? 
-
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 654.
+(amsmath)                 on input line 673.
 
-[14]
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.673 Z powyÅ¼szej definicji Å‚atwo udowodniÄ‡Â 
-                                                kilka wÅ‚asnoÅ›ci:
-? 
-
-! Package inputenc Error: Unicode char \u8:Â  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.680 ... $ k = -1 $. Przyjmuje wtedy ona formÄ™Â 
-                                                  
-? 
-[15] [16
+[14] [15] [16
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
-[17] (./main.aux) ) 
+[17] [18] [19]
+Overfull \hbox (4.45833pt too wide) in paragraph at lines 877--877
+[]\OT4/cmr/bx/n/14.4 Wªasno±¢ A dla sko«-cze-nie wy-mia-ro-wych kom-plek-sów ko
+st-
+ []
+
+[20] [21] [22] [23] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 1827 strings out of 494985
- 20674 string characters out of 6180449
+ 1872 strings out of 494985
+ 21463 string characters out of 6180449
  76967 words of memory out of 5000000
- 5012 multiletter control sequences out of 15000+600000
- 31766 words of font info for 98 fonts, out of 8000000 for 9000
+ 5040 multiletter control sequences out of 15000+600000
+ 36149 words of font info for 115 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 27i,12n,26p,219b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{
-/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/t
-exmf-dist/fonts/enc/dvips/pl/plme.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}</
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr1
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/pl/plsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on main.pdf (19 pages, 179775 bytes).
+ 27i,12n,26p,221b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvip
+s/pl/plit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/
+share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/pl/plme.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips
+/pl/plms.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbol
+d10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/pl/plbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/pl/plmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/pl/plmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl
+/plmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/pl/plr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/p
+lr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/pl/plsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/pl/plsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plt
+i10.pfb>
+Output written on main.pdf (25 pages, 225588 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 187 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

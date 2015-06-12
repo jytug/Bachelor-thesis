@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{bbold}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definicja}[section]
@@ -78,7 +79,25 @@
 \chapter*{Motywacja}
 \addcontentsline{toc}{chapter}{Motywacja}
 
-Motywacja bpeaasdgdagafg
+Kompleksy kostkowe $ \text{CAT(0)} $ są pewnym naturalnym uogólnieniem drzew na większą liczbę 
+wymiarów, przy czym za brak cykli odpowiada właśnie własność $ \text{CAT(0)} $ - nie jest 
+więc zaskakujące pytanie o ich własności. Niniejsza praca wprowadza jedynie skrótowo 
+pojęcia przestrzeni $ \text{CAT(0)} $ oraz kompleksów kostkowych. W poszukiwaniach głębszej 
+literatury polecam zajrzeć do [Caprace], [Schwer] bądź też [Sageev].
+
+Niniejsza praca skupia się na dowodzie twierdzenia mówiącego, iż każdy skończenie 
+wymiarowy kompleks kostkowy ma własność $ A $, i opiera się na [BCGNW]. Własność $ A $, 
+po raz pierwszy zdefiniowana przez Yu (więcej informacji w [Willett]) 
+jest pewnym uogólnieniem pojęcia średniowalności, zdefiniowanym dla grup. Definicja 
+nawet optycznie przypomina pewne kryterium średniowalności, a więc istnienie 
+ciągu Følnera. Istotne jest to, iż własność $ A $ jest niezmiennikiem relacji 
+zgrubnej równoważności, coraz częściej pojawiającej się w literaturze (więcej informacji 
+o geometrii zgrubnej można znaleźć w [Roe]).
+
+Dowód głównego twierdzenia poparty będzie przykładem, w którym udowodnimy w niestandardowy 
+sposób własność $ A $ dla konkretnego kompleksu kostkowego $ \text{CAT(0)} $, 
+przestrzeni euklidesowej $ \mathbb{R}^d $. Dalsze postępowanie okaże się równoległe, choć 
+nieco bardziej skomplikowane technicznie. 
 
 \chapter{Wprowadzenie}
 
@@ -401,7 +420,7 @@ przecięcie ścian o wyższym kowymiarze.
 %	będzie ciągiem wierzchołków na najkrótszej ścieżce krawędziowej łączącej $ x $ oraz $ y $.
 %	Wówczas
 %	$$ d_1(x,y) \leq \sum\limits_{i = 0}^{n-1} d_1(x_{i}, x_{i+1}) = n = d_2(x,y) $$
-%
+
 %	Odwrotnie, mając dwa wierzchołki $ x,y $ takie, że $ d_2(x,y) = k $, to odcinek 
 %	łączący $ x $ oraz $ y $ jest kompleksem kostkowym $ \text{CAT(0)} $, który 
 %	zanurza się jako podkompleks $ [0,1]^k $. Zanurzenie to jest izometrią ze względu na 
@@ -426,7 +445,7 @@ spójne podzbiory nazwiemy \textbf{półprzestrzenią}.
 
 Dwie hiperpłaszczyzny tworzą podział kompleksu na cztery przecięcia półpłaszczyzn. Jeśli 
 wszystkie są niepuste, to hiperpłaszczyzny \textbf{przecinają się}. Dwa wierzchołki 
-$ x,y $ są \textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
+$ x,y $ są\textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
 wyznaczonych przez nią półprzestrzeni. 
 
 Zbiór hiperpłaszczyzn oddzielających $ x $ od $ y $ będziemy oznaczać przez 
@@ -438,8 +457,8 @@ $ [x,y] \subset V $.
 Dla trzech wierzchołków $ w,x,y $ możemy wyróżnić ich \textbf{medianę}, zdefiniowaną 
 jako jedyny wierzchołek należący do $ [w,x] \cap [x,y] \cap [w,y] $
 
-Dla kompleksu kostkowego $ \text{CAT(0)}~ X$ możemy wprowadzić brzeg kombinatoryczny. 
-Niech funkcja $ \sigma $ przypisuje hiperpłaszczyźnie $ X $ jedną z wyznaczonych przez nią 
+Dla kompleksu kostkowego $ \text{CAT(0)}~ X$ możemy wprowadzić brzeg kombinatoryczny. 
+Niech funkcja $ \sigma $ przypisuje hiperpłaszczyźnie $ X $ jedną z wyznaczonych przez nią 
 półprzestrzeni, przy czym dla każdych dwóch hiperpłaszczyzn $ H_1, H_2 $ zachodzi 
 $ \sigma(H_1) \cap \sigma(H_2) \neq \emptyset $. Taką funkcję nazwiemy \textbf{ultrafiltrem}.
 
@@ -541,7 +560,7 @@ kostkowy z przestrzenią euklidesową.
 	Niech $ \{z_j\}_{j = 1}^{\infty} \subset X $ będzie ciągiem wierzchołków zbieżnym 
 	do $ z $. Odcinek $[x,y] $ jest skończony i zawiera mediany $ m_j = m(x,y,z_j) $. 
 	Istnieje więc $ m \in [x,y] $ taki, że $ m = m_j \in [x,z_j] $ dla nieskończenie 
-	wielu $ j \in \mathbb{N} $. Z poprzedniego lematu wynika więc, że $ m \in [x,z_j] $ dla 
+	wielu $ j \in \mathbb{N} $. Z poprzedniego lematu wynika więc, że $ m \in [x,z_j] $ dla 
 	niemal wszystkich $ j \in \mathbb{N} $ oraz $ m \in [x,z] $. Podobnie $ m \in [y,z] $.
 
 	Załóżmy teraz, że $ m \neq m' $ należą do $ [x,y] \cap [x,z] \cap [y,z] $ i niech 
@@ -597,7 +616,7 @@ Wprowadźmy na zbiorze $ \mathfrak{H}(x,y) $ częściowy porządek w następują
 $$ H \preceq K \iff H_x \subset K_x $$
 
 \begin{lemma}
-	Dwie płaszczyzny $H,K \in \mathfrak{H}(x,y)$ nie są porównywalne w tym 
+	Dwie płaszczyzny $H,K \in \mathfrak{H}(x,y)$ nie są porównywalne w tym 
 	porządku wtedy i tylko wtedy, gdy się przecinają.
 \end{lemma}
 \begin{proof}
@@ -670,16 +689,396 @@ Można łatwo uogólnić tę funkcję dla wszystkich $ n,k \in \mathbb{Z} $ popr
 	\mathbb{Z} $
 \end{itemize}
 
-Z powyższej definicji łatwo udowodnić kilka własności:
+Z powyższej definicji łatwo udowodnić kilka własności:
 
 \begin{itemize}
 	\item ${n \choose k} = 0$ dla $ k < 0 \leq n $
 	\item $ {n \choose k} = (-1)^{n+k}{-1-r \choose -1-n} $
 \end{itemize}
 
-Szczególnie przydatna okaże się druga własność, dla $ k = -1 $. Przyjmuje wtedy ona formę 
+Szczególnie przydatna okaże się druga własność, dla $ k = -1 $. Przyjmuje wtedy ona formę 
 $$ {n \choose -1} = (-1)^{n-1} {0 \choose -1-n} $$
 
 \chapter{Kompleksy kostkowe $ \text{CAT(0)} $ a własność A}
 
+W tym rozdziale skupimy się na dowodzie twierdzenia łączącego kompleksy kostkowe 
+$ \text{CAT(0)} $ z własnością A. Zaczniemy od przykładu motywującego dowód głównego 
+twierdzenia. O funkcjach $ f_{n,x} $ wymienionych w Stwierdzeniu 1.1.1. będziemy mówić jako o 
+\textit{funkcjach wagowych}. Również z warunków podanych w tym stwierdzeniu korzystać 
+będziemy zamiast definicji własności $A$.
+
+Ustalmy również pewien wymiar $\mathbb{N} \ni N \geq d $. 
+Niektóre lematy prawdziwe będą również dla przypadku $ N = d-1$ - zostanie to odpowiednio 
+podkreślone.
+
+\section{Własność $ A $ dla przestrzeni euklidesowych}
+
+\begin{example}
+	Niech $ T $ będzie $ \mathbb{R} $-drzewem, a więc spójnym grafem niezawierającym cykli. 
+	Aby pokazać, że $ T $ ma własność $ A $, ustalmy korzeń $ K $. Dla każdego wierzchołka 
+	$ x \in X $ oraz $ n \in\mathbb{N} $ definiujemy funkcję wagową
+	$$ \tilde f_{n,x}(y) = 
+	\begin{cases}
+		1 & \text{ jeśli } y \neq K \\
+		n - d(x,y) & \text{ jeśli } y = K
+	\end{cases} $$
+	Wówczas ciąg rodzin funkcji $ f_{n,x}(y) = \tilde f_{n,x}(y) \cdot \mathbb{1}_{B
+	(x, n)} (y) $ spełnia warunki Stwierdzenia 1.1.1
+\end{example}
+
+Pewna intuicja stojąca za tym przykładem jest następująca: przy $ n $ dążącym do 
+nieskończoności rozkładamy wagę równomiernie na kuli $ B(x,n) $, nadmiar zrzucając na 
+ustalony korzeń. W pewien sposób intuicja ta okaże się użyteczna w przypadku 
+wielowymiarowym, być może przy więcej niż jednym punkcie rozkładu nadmiaru. 
+
+Będziemy dalej oznaczać $ \textbf{0} = (0, \dots, 0) \in \mathbb{R}^d $.
+
+\begin{definition}
+	\textbf{Niedostatkiem} punktu kratowego $ (y_1, \dots, y_d) = y \in \mathbb{Z}^d $ 
+	nazwiemy liczbę 
+	$$ \delta(y) = N - \# \{1 \leq j \leq d: ~ y_j \neq 0 \} $$
+\end{definition}
+
+\begin{definition}
+	Dla wierzchołka $ x \in \mathbb{Z}^d $ możemy zdefiniować ciąg rodzin funkcji wagowych 
+	następująco:
+	$$ f_{n,x}(y) = {n - d(x,y) + \delta(y) \choose \delta(y)} \cdot 
+	\mathbb{1}_{[\textbf{0},x]} (y)$$
+\end{definition}
+
+Nietrudno zauważyć kilka własności tego ciągu. Przy założeniu, iż $ N \geq d - 1 $ mamy 
+$ \delta(y) \geq (-1) $, a więc funkcja $ f_{n,x} $ przyjmuje nieujemne wartości 
+całkowite dla każdego $ x \in \mathbb{Z}^d $ oraz $ n \in \mathbb{N} $. Funkcje te 
+zależą również od niewymienionego \textit{explicite} we wzorze $ N $. Ponadto 
+$$ \# \text{supp}f_{x,n} = \# [\textbf{0}, x] < \infty $$
+
+Przy tak zdefiniowanych wagach można pokazać, iż przestrzeń $ \mathbb{Z}^d $ ma własność 
+$ A $. Przez normę $ \| f(y)\| $ na przestrzeni funkcji o skończonym 
+nośniku będziemy rozumieć 
+$$ \| f \| = \| f \|_{\ell_1} = \sum\limits_{x \in \text{dom}(f)} |f(x)| $$
+
+\begin{lemma}
+	Niech $ N \geq d - 1 $ oraz $ x \in \mathbb{Z}^d $. Wówczas dla tak zdefiniowanych funkcji 
+	mamy $$ \| f_{n,x}\|  = { n + N \choose N}$$
+\end{lemma}
+\begin{proof}
+	Dowód przeprowadzimy przez indukcję ze względu na $ d $, dla wygody oznaczeń napiszemy 
+	więc $ f_{n,x} \equiv f_{n,x}^d $. Przypadek $ d = 0 $ jest trywialny, gdyż 
+	$ \delta(y) = N $. Załóżmy więc, że $ d > 0 $. Skorzystamy z rzutowania 
+	$ \mathbb{Z}^d \ni (z_1, \dots, z_d) = z \rightarrow \hat z = (z_2, \dots, z_d) \in 
+	\mathbb{Z}^{d-1} $.
+	Niech $ x = (x_1, \dots, x_d) \in \mathbb{Z}^d $.Wówczas odcinek 
+	$ [\textbf{0}, x]$ można utożsamić z $[0,x_1] \times [\textbf{0}, \hat x] $, tym 
+	samym otrzymując dla każdego $ \hat y \in [\textbf{0}, \hat x] $ ciąg 
+	$ y^0, y^1, \dots, y^{|x_1|} $ (w wypadku, gdyby $ x_1 < 0 $, rozważamy na odcinku 
+	$ [0,x_1] $ porządek $ 0 < 1 < 2 \dots <x_1 $
+
+	Pokażemy, że dla każdego $ \hat y \in [\textbf{0}, \hat x] $ zachodzi 
+	\begin{equation} \label{eq:iksjeden}
+	\sum\limits_{j = 0}^{|x_1|} f_{n,x}^d(y^j) = f^{d-1}_{n,\hat x}(\hat y
+	\end{equation}
+
+	Załóżmy jednak na moment, że to prawda. Możemy wtedy obliczyć normę $ f_{n,x}^d $:
+
+	\begin{align*}
+		\| f^d_{n,x} \| & = \sum\limits_{z \in \mathbb{Z}^d}f^d_{n,x}(z) = 
+		\sum\limits_{z \in [\textbf{0}, x]} f^d_{n,x} (z) \\
+		& = \sum\limits_{\hat y \in [\textbf{0}, \hat x]} \sum\limits_{j = 0}^{|x_1|}
+		f_{n,x}^d(z) (y^j) \stackrel{~\ref{eq:iksjeden}}{=} \sum\limits_{\hat y 
+		\in [\textbf{0}, \hat x]} f^{d-1}_{x,n} (\hat y) \\
+		& = \sum\limits_{\hat y \in \mathbb{Z}^{d-1}} f_{n,x}^{d-1} (\hat y) = 
+		{n + N \choose n} 
+	\end{align*}
+
+	Aby udowodnić~\ref{eq:iksjeden}, należy zauważyć, iż 
+	$ \delta (y^{i+1}) = \delta(\hat y) - 1 $ dla $ i \geq 0 $ oraz iż $ d(x,y^i) = 
+	d(x, y^{i+1}) + 1 $, a następnie skorzystać z indukcji względem $ i = |x_1|$. 
+	Dokładnie obliczenia zostawiam czytelnikowi.
+\end{proof}
+
+\begin{remark}
+	Z powyższego lematu wynika dość zaskakujący, ale przydatny fakt - norma 
+	$ f_{n,x} $ nie zależy od wyboru $ d $ ani $ x $, jedynie $ n $ oraz $ N $.
+\end{remark}
+
+W celu udowodnienia własności $ A $ dla przestrzeni Euklidesowych $ \mathbb{R}^n $ 
+należy znaleźć pewne oszacowanie normy $ f_{n,x} - f_{n,x'} $ dla $ x,x' \in 
+\mathbb{Z}^n $ w rozsądnej odległości od siebie. Odpowiada za to poniższy lemat:
+
+\begin{lemma}
+	Dla każdego $ N \geq d $ i \underline{sąsiednich} wierzchołków $ x,x'\in \mathbb{Z}^d $
+	mamy $$ \| f_{n,x} - f_{n,x'}\| = 2 {n + N - 1 \choose N -1} $$
+\end{lemma}
+\begin{proof}
+	Będziemy rozróżniać funkcje wagowe dla różnych $ N $, na potrzeby dowodu wprowadzimy 
+	więc oznaczenie $ f_{n,x} \equiv f_{n,x}^N $. Mamy dla $ n,k \in \mathbb{Z} $ tożsamość 
+	$ {n \choose k } = {n -1\choose k} + {n-1 \choose k-1} $, a więc 
+	\begin{equation} \label{eq:newton}
+		{n \choose k} - {n -1\choose k} = {n - 1 \choose k - 1}
+	\end{equation} 
+
+	Niech $ x,x' $ będą sąsiednimi krawędziami i bez utraty ogólności możemy założyć, 
+	że $ x'$ jest bliżej $ \textbf{0} $ niż $ x $. Wówczas $[\textbf{0}, x'] \subset 
+	[\textbf{0},x]$ i dla każdego $ y \in [\textbf{0},x'] $ mamy $ x' \in [y,x] $.
+	Wówczas również $ d(x,y) = d(x',y) + 1 $. Wybierając takie $ y $, możemy napisać:
+	\begin{align*}
+		f_{n,x'}^N - f_{n,x}^N & = {n - d(x',y) + \delta(y) \choose \delta(y)} - 
+		{n - d(x,y) + \delta(y) \choose \delta(y)} \\
+		&= {n - d(x',y) + \delta(y) \choose \delta(y)} - {n - d(x',y) + \delta(y) - 1 
+		\choose \delta(y)} \\
+		& \stackrel{~\ref{eq:newton}}{=} {n - d(x',y) + \delta(y) - 1 \choose \delta(y) - 1} \\
+		& = f_{n,x'}^{N-1}(y)
+	\end{align*}
+	Z poprzedniego lematu wynika zatem, że $\sum_{y \in [\textbf{0}, x']} \left| 
+	f_{n,x'}^N - f_{n,x}^N \right| = \| f_{n,x'}^{N-1}\| = {n + N - 1 \choose N - 1} $. Do 
+	obliczenia normy $ f_{n,x'}^N - f_{n,x}^N $ brakuje więc tylko ogona 
+	$ \sum_{y \in [\textbf{0},x] \setminus [\textbf{0}, x']} f_{n,x'}^N(y) - f_{n,x}^N(y) $. 
+	Łatwo go obliczyć, zauważywszy, że z lematu 2.1.1. wynika, iż
+	$$ \sum\limits_{y \in [\textbf{0},x]} f_{n,x'}^N =   
+		\sum\limits_{y \in [\textbf{0},x]} f_{n,x}^N $$
+	Jest tak, gdyż obie strony są równe normie, która przecież jest niezależna od $ x $.
+	
+	Lewą stronę można rozpisać jako $  \sum_{y \in [\textbf{0},x']} f_{n,x'}^N + 
+	 \sum_{y \in [\textbf{0},x] \setminus [\textbf{0}, x']} f_{n,x'}^N  $, podobnie prawą. 
+	Otrzymujemy wtedy:
+	$$  \sum\limits_{y \in [\textbf{0},x']} f_{n,x'}^N - f_{n,x}^N =
+	   \sum\limits_{y \in [\textbf{0},x]\setminus [\textbf{0},x']} f_{n,x'}^N - f_{n,x}^N $$
+
+	Teza lematu jest już jasna:
+ 	\begin{align*} 
+		\|f_{n,x'} - f_{n,x} \| & =\sum\limits_{y\in [\textbf{0},x]} f_{n,x'}(y) - f_{n,x}(y) \\
+		&= \sum\limits_{y\in [\textbf{0},x']} f_{n,x'}(y) - f_{n,x}(y)  + 
+		\sum\limits_{y\in [\textbf{0},x]\setminus [\textbf{0},x']} f_{n,x'}(y) - f_{n,x}(y)\\ 
+		& = 2\sum\limits_{y\in [\textbf{0},x']} f_{n,x'}(y) - f_{n,x}(y) = 2{n + N-1 
+		\choose N-1}
+	\end{align*}
+\end{proof}
+
+Powyższe wyniki prowadzą już do następującego twierdzenia:
+
+\begin{theorem}
+	Przestrzeń euklidesowa $ \mathbb{R}^d $ ma własność $ A $.
+\end{theorem}
+\begin{proof}
+	Korzystamy ze stwierdzenia 1.1.1. Odpowiedni ciąg stałych to $ S_n = n $. Fakt, 
+	że nośnikiem kolejnych funkcji $ f_{n,x} $ jest $ B(x,n) $, wynika stąd, że 
+	wyrażenie $ {n - d(x,y) + \delta(y) \choose \delta(y)} $ znika dla $ n - d(x,y) + \delta(y)
+	< \delta(y) $. Zbieżność wynika z ostatnich dwóch lematów, a dokładniej:
+	$$ \frac{\|f_{n,x'} - f_{n,x} \|}{ \|f_{n,x} \|} = 2\frac{{n + N - 1 \choose {N - 1}}}
+	{{n + N \choose N}} = 2 \frac{N}{n + N} \xrightarrow{n \rightarrow \infty} 0 $$
+	przy czym zbieżność jest jednostajna na zbiorze $ \{(x,x'): ~ d(x,x') \leq 1\} $
+\end{proof}
+
+Przedstawiony właśnie dowód własności $ A $ dla przestrzeni $ \mathbb{R}^d $ będzie 
+motywacją. Dokładniej, wprowadzimy funkcje wagowe o \underline{dokładnie tych samych} 
+własnościach dotyczących normy. Do tego potrzebne będą nam odpowiednie 
+włókna przy rzutowaniu, a także zmodyfikowana definicja niedostatku.
+
+\section{Własność A dla skończenie wymiarowych kompleksów kostkowych $ \text{CAT(0)} $}
+
+Niech $ X $ będzie kompleksem kostkowym $ \text{CAT(0)} $ oraz $ d = \dim X < \infty $. 
+Tak jak w poprzednim przypadku punktem bazowym (korzeniem) było $ \textbf{0} = (0, \dots, 0) 
+\in \mathbb{Z}^d $, tak teraz ustalmy dowolny korzeń $ O \in X $. Ustalmy ponadto pewien 
+wymiar otoczki $ N \geq d - 1 $. Wtedy:
+\begin{definition}
+	\textbf{Niedostatkiem} wierzchołka $ y \in X $ nazwiemy liczbę
+	$$ \delta(y) = N - \# \mathfrak{R}_O(y) $$
+	Tu $ \mathfrak{R}_O(y) $, tak jak w poprzednim rozdziale, oznacza liczbę 
+	hiperpłaszczyzn sąsiadujących z $ y $ oraz oddzielających ten wierzchołek od korzenia.
+\end{definition}
+
+Powyższa definicja pokrywa się z definicją niedostatku w przypadku, gdy $ X = 
+\mathbb{R}^d $, ponieważ wówczas liczba $ \# \mathfrak{R}_{\textbf{0}} (y)$ równa się 
+liczbie niezerowych współrzędnych $ y$.
+
+Naśladując poprzedni rozmiar definiujemy wiec funkcje wagowe
+\begin{definition}
+	Niech $ x \in X $ będzie krawędzią. Możemy wówczas ciąg rodzin funkcji wagowych 
+	zdefiniować następująco:
+
+	$$ f_{n,x}(y) = {n - d(x,y) + \delta(y) \choose \delta(y)} \cdot 
+	\mathbb{1}_{[O, x]}(y) $$
+\end{definition}
+
+Wykorzystamy teraz twierdzenie 1.3.1., mówiące, iż każdy odcinek $ [0,x] $ 
+zanurza się izometrycznie w przestrzeń Euklidesową $ \mathbb{R}^d $. Nazwijmy to 
+zanurzenie $  \sigma $, dla uproszczenia notacji będziemy jednak pisać $ \sigma(y) = 
+\hat y \in \mathbb{Z}^d $
+Nie tracąc na ogólności, możemy 
+założyć, że obraz $ O $ przy tym zanurzeniu to $ \textbf{0} \in \mathbb{R}^d $. 
+
+\begin{definition}
+	Niech $ y \in [O, x]$, przy czym  $\sigma(y) = \hat y = (\hat y_1, \dots, \hat y_d) \in 
+	\mathbb{Z}^d$. 
+	Wówczas $ i $ (lub $ i $-ta współrzędna) jest 
+	\textbf{$ y $-związane}, 
+	jeśli wierzchołek $ (\hat y_1, \dots, \hat y_i - 1, \dots, \hat y_d) \in \mathbb{Z}^d $ 
+	jest w obrazie $ \sigma(X) $. W przeciwnym przypadku $ i $ jest \textbf{$ y $-wolne}.
+\end{definition}
+
+\begin{definition}
+	Niech $ y \in [0,x] $. \textbf{Włóknem} odcinka $ I = [\hat O, \hat x] $ nad $ \hat y $ 
+	nazwiemy zbiór krawędzi $ \mathfrak{F}_y \subset \mathbb{Z}^d $, taki, że dla 
+	każdego $ a \in \mathfrak{F}_y $ spełnione są 
+	następujące warunki:
+	\begin{itemize}
+		\item jeśli $ i $ jest $ y $-związany, to $ a_i = \hat y_i $
+		\item jeśli $ i $ jest $ y $-wolny, to $ 0 \leq a_i \leq \hat y_i $
+	\end{itemize}
+\end{definition}
+
+%tutaj jakaś intuicja
+
+Należy zwrócić uwagę, że włókno $ \mathfrak{F}_y $ jest odcinkiem łączącym punkt 
+
+$ O_y =(O_{y,1}, \dots, O_{y,d}), ~O_{y,i} = \hat y_i[ i \text{ jest } y \text{-związany}]) $
+
+z punktem $\hat y$. W szczególności dla każdego $ y \in [O,x] $ zachodzi $ \hat y \in 
+\mathfrak{F}_y $
+
+\begin{proposition}
+	Odcinek $ I = [\hat O, \hat x] $ jest sumą rozłączną włókien wierzchołków 
+	odcinka $ [O, x] $, dokładniej:
+	$$ I = \bigsqcup\limits_{y \in [O,x]} \mathfrak{F}_y $$
+	Dodatkowo każde włókno przecina się z odcinkiem $ J = \sigma([O,x]) $ w dokładnie 
+	jednym punkcie.
+\end{proposition}
+Jest to konsekwencja poniższych dwóch lematów:
+\begin{lemma}
+	Dla każdego $ y \neq z, ~ y,z \in [O,x] $ przecięcie włókien $ \mathfrak{F}_y, 
+	\mathfrak{F}_z $ jest puste.
+\end{lemma}
+
+\begin{proof}
+	% do uzupełnienia / przekminienia / odesłania
+\end{proof}
+
+\begin{lemma}
+	Dla każdego $ a \in I = [\hat O, \hat x] $ istnieje $ y \in [O,x] $ taki, że 
+	$ a \in \mathfrak{F}_y $
+\end{lemma}
+\begin{proof}
+	Niech $ \hat y  \in [a,\hat x] $, przy czym wybierzmy $ \hat y $ tak, aby odległość 
+	$ a $ od $ [a, \hat x] \cap J $ 
+	była najmniejsza. Oczywiście $ \hat y_i \geq a_i $ dla wszystkich $ i = 1, \dots, 
+	d $. Ale każda $ y $-związana współrzędna $ i $ mamy $ \hat y_i \leq a_i$, bo gdyby 
+	było inaczej, to $ (\hat y_1, \dots, \hat y_i - 1, \hat y_d) \in [a, \hat x] \cap J $, 
+	co przeczy doborowi $ \hat y $. Zatem $ a \in \mathfrak{F}_y $.
+\end{proof}
+
+W dalszej części rozważań przyjmiemy konwencję notacyjną, dla $ x \in[z,y] $ pisząc 
+$$ n_z(x) \stackrel{\text{def}}{=} \# \mathfrak{R}_z(x) $$
+
+Zwróćmy uwagę, że dla $ a \in \mathbb{Z}^d $ liczba $  n_{\textbf{0}}(a)$ równa jest 
+liczbie niezerowych współrzędnych $ a $, zaś gdy $ y\in[O,x] $ jest jedynym takim 
+wierzchołkiem, iż $ a \in \mathfrak{F}_y = [O_y, \hat x]$, to $ n_{O_y}(a) $ równa się 
+liczbie niezerowych, $ y $-wolnych współrzędnych $ a $.
+
+\begin{lemma}
+	Dla każdego wierzchołka $ y \in [O,x] $ liczba $ y $-związanych współrzędnych 
+	wynosi $ n_O (y) $. Ponadto dla $ a \in \mathfrak{F}_y $ zachodzi relacja:
+	$$ n_{\textbf{0}}(a) = n_{O_y}(a) + n_O(y) $$
+\end{lemma}
+\begin{proof}
+	Jeśli $ i $-ta współrzędna jest $ y $-związana, wybierzmy $ z\in[O,x] $ tak, aby 
+	obrazy $ \hat y $ oraz $ \hat z $ różniły się tylko na $ i $-tej współrzędnej, dla której 
+	$ \hat z_i = \hat y_i - 1  $. Wówczas oczywiście $ d(y,z) = d(\hat y, \hat z) = 1 $, a 
+	także $ d(O,y) = d(O,z) + 1 $. Zatem jedyna $ H \in \mathfrak{H}(y,z) $ należy 
+	również do $ \mathfrak{H}(O,y) $. Pokażemy, że przyporządkowanie $ i \rightarrow H $ jest 
+	bijekcją. Różnowartościowość wynika z Wniosku 1.3.1., gdyż hiperpłaszczyzna 
+	$ H $ należy do $ i $-tego łańcucha. Aby wykazać surjektywność, należy zauważyć, iż 
+	jeśli $ H \in \mathfrak{R}_O(y) $, to $ H \in \mathfrak{H}(O,x) $, a więc 
+	$ H $ jest obrazem $ i $ takiego, że $ H \in \mathfrak{B}_i $. To dowodzi pierwszej 
+	części.
+
+	Aby uzyskać drugą część, wystarczy skorzystać z tego, że każda niezerowa współrzędna 
+	$ a $ jest albo $ y $-związana, albo $ y $-wolna, nigdy jednocześnie. Pierwszy składnik 
+	odpowiada za to drugie, zaś drugi - za to pierwsze.
+\end{proof}
+
+W końcu możemy przejść do dowodu twierdzenia zamykającego tę pracę:
+
+\begin{theorem}
+	Niech $ X $ będzie kompleksem kostkowym $\text{CAT(0)} $ oraz $ d= \dim X < \infty $. 
+	Wówczas $ X $ ma własność $ A $.
+\end{theorem}
+
+Dowód przebiega bez zmian względem dowodu własności $ A $ dla przestrzeni euklidesowych, 
+wykorzystując przy okazji następujące lematy:
+
+\begin{lemma}
+	Niech $ X $ będzie kompleksem kostkowym o wymiarze nie większym niż $ d < \infty$. 
+	Przyjmijmy pewien wymiar otoczki $ N \geq d-1 $. Niech wreszcie $ x \in X $ będzie 
+	wierzchołkiem Wówczas 
+	$$ \|f_{n,x}\| = {n + N \choose n} $$
+\end{lemma}
+
+\begin{proof}	
+	Przyjmijmy, że $ \sigma([O,x]) = J \subset I = [\textbf{0}, \hat x] $ dla ustalonego 
+	$ x \in X $.
+	
+	Funkcje wagowe zależą od $ n, x$, ale także od wymiaru otoczki $ N $, a także 
+	kompleksu, na którym je rozpatrujemy, $ X $. Zależność tę będziemy wykorzystywać w dowodzie, 
+	zatem przyjmiemy notację
+	$$ f_{n,x} \equiv f_{n,x}^{N,X} $$ 
+
+	Podobnie będziemy oznaczać niedostatek: $ \delta(y) \equiv \delta(y)^{N,X}(y) $. 
+	Elementy włókna mają dwa niedostatki, jeden względem $ \hat O \in I $, drugi zaś 
+	względem punktu bazowego $ O_y $ takiego, że $ \mathfrak{F}_y = [O_y, \hat x] $. 
+	Będziemy oznaczać je odpowiednio $ \delta^{N,I}(a)$ oraz $ \delta^{N, \mathfrak{F}_y}(a) $. 
+	Zachodzi wówczas wzór
+	\begin{equation}\label{eq:krejzi}
+	\delta^{N,I}(a) = \delta^{N_y, \mathfrak{F_y}}(a), ~~ N_y = N - n_O(y)
+	\end{equation}
+		
+	Dowód tej tożsamości jest dość prosty. Zgodnie z definicją mamy:
+	$$ \delta^{N,I}(a) = N - n_{\hat O}(a), ~~~ \delta^{N, \mathfrak{F}_y}(a) = \left( 
+	N - n_{O_y}(a), ~~~ \delta^{N,X} = N - n_O(y)\right), $$
+	co razem z Lematem 2.2.3. daje~\ref{eq:krejzi}
+
+	Nasz lemat jest łatwym zastosowaniem następującej równości:
+
+	\begin{equation} \label{eq:erde}
+		f_{n,x}^{N,X}(y) = \sum\limits_{a \in \mathfrak{F}_y} f_{n,\hat x}^{N, \mathbb{R}^d}
+	\end{equation}
+
+	Rzeczywiście, załóżmy na moment, że to prawda. Wówczas, korzystając ze Stwierdzenia 2.2.1., 
+	mówiącego, iż odcinek $ I $ jest rozłączną sumą włókien, otrzymamy ciąg równości:
+	\begin{align*}
+	 \| f_{n,x}^{N,X}\|= &\sum\limits_{y \in [O,x]} f_{n,x}^{N,X}(y) \\
+	 &= \sum\limits_{y \in [0,x]} \sum \limits_{a \in \mathfrak{F}_y} f_{n,\hat x}^{N, 
+	\mathbb{R}^d} (a)  = \sum\limits_{a \in I} f_{n,\hat x}^{N, \mathbb{R}^d}(a) \\
+	& = \| f_{n, \hat x}^{N, \mathbb{R}^d} (a)\| \stackrel{\text{lemat 2.1.1.}}{=} {n + N \choose n}
+	\end{align*}
+
+	Pozostaje udowodnić ~\ref{eq:erde}. W tym celu ustalmy $ y \in [O,x] $. Możemy 
+	założyć $ d(x,y) \leq n $, gdyż w przeciwnym wypadku obie strony znikają.
+
+	Wykorzystując więc~\ref{eq:krejzi}, możemy otrzymać~\ref{eq:erde}:
+
+	\begin{align*} 
+	f_{n, \hat x}^{N, \mathbb{R}^d} (a) & = {n - d(\hat x, a) + \delta^{N,I} \choose \delta^{N,I}
+	(a)} \\
+	& = {(n - d(\hat x, \hat y)) - d(\hat y, a) + \delta^{N_y, \mathfrak{F}_y} (a) \choose 
+	\delta^{N_y, \mathfrak{F}_y}(a)} \\
+	& = f_{n - d(\hat x, \hat y), \hat y}^{N, \mathfrak{F}_y} (a)
+	\end{align*}
+
+	Pamiętając, że  $ x \rightarrow \hat x$ jest izometrią, oraz sumując po $ a \in 
+	\mathfrak{F}_y $, otrzymujemy:
+	\begin{align*}
+	\sum\limits_{a \in \mathfrak{F}_y} f_{n,\hat x}^{N, \mathbb{R}^d}(a) &= 
+	\|f_{n - d(x,y), \hat y}^{N_y, \mathfrak{F}_y}\| \\
+	& = {n - d(x,y) + N_y \choose N_y} = {n - d(x,y) + \delta^{N,X}(y) \choose \delta^{N,X}(y)},
+	\end{align*}
+	przy czym ostatnia równość wynika z~\ref{eq:krejzi}. Wobec tego~\ref{eq:erde} zostało 
+	udowodnione, a więc i cały lemat.
+\end{proof}
+\begin{lemma}
+	Niech $ X $ będzie kompleksem kostkowym $ \text{CAT(0)} $ o wymiarze $ d = \dim X < \infty $.
+	Dla każdej pary sąsiednich wierzchołków $ x,x' $ zachodzi:
+	$$ \| f_{n,x'} - f_{n,x}\| = 2 {n + N - 1 \choose N - 1} $$
+\end{lemma}
+Dowód, zarówno tego lematu, jak i całego twierdzenia, 
+jest identyczny jak w przypadku euklidesowym.
 \end{document}
