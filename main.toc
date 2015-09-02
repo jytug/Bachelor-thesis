@@ -7,3 +7,4 @@
 \contentsline {chapter}{\numberline {2}Kompleksy kostkowe $ \text {CAT(0)} $ a w\IeC {\l }asno\IeC {\'s}\IeC {\'c} A}{17}
 \contentsline {section}{\numberline {2.1}W\IeC {\l }asno\IeC {\'s}\IeC {\'c} $ A $ dla przestrzeni euklidesowych}{17}
 \contentsline {section}{\numberline {2.2}W\IeC {\l }asno\IeC {\'s}\IeC {\'c} A dla sko\IeC {\'n}czenie wymiarowych kompleks\IeC {\'o}w kostkowych $ \text {CAT(0)} $}{20}
+\contentsline {chapter}{Bibliografia}{25}

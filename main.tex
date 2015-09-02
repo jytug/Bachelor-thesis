@@ -79,25 +79,39 @@
 \chapter*{Motywacja}
 \addcontentsline{toc}{chapter}{Motywacja}
 
-Kompleksy kostkowe $ \text{CAT(0)} $ są pewnym naturalnym uogólnieniem drzew na większą liczbę 
-wymiarów, przy czym za brak cykli odpowiada właśnie własność $ \text{CAT(0)} $ - nie jest 
-więc zaskakujące pytanie o ich własności. Niniejsza praca wprowadza jedynie skrótowo 
+Kompleksy kostkowe są pewnym naturalnym uogólnieniem pojęcia grafu na większą liczbę 
+wymiarów - zaś własność $ \text{CAT(0)} $ odpowiada za ,,brak cykli'', uogólniając 
+analogicznie przypadek szczególny - drzewa. Nie jest 
+więc zaskakujące pytanie o ich własności - poniższa praca wprowadza podstawowe 
 pojęcia przestrzeni $ \text{CAT(0)} $ oraz kompleksów kostkowych. W poszukiwaniach głębszej 
-literatury polecam zajrzeć do [Caprace], [Schwer] bądź też [Sageev].
+literatury polecam zajrzeć do \cite{caprace}, \cite{schwer} bądź też \cite{sageev}.
 
-Niniejsza praca skupia się na dowodzie twierdzenia mówiącego, iż każdy skończenie 
-wymiarowy kompleks kostkowy ma własność $ A $, i opiera się na [BCGNW]. Własność $ A $, 
-po raz pierwszy zdefiniowana przez Yu (więcej informacji w [Willett]) 
+W swojej pracy skupiam się na dowodzie twierdzenia mówiącego, że każdy skończenie 
+wymiarowy kompleks kostkowy ma własność $ A $, opierając się na \cite{brodzki}. Własność $ A $, 
+po raz pierwszy zdefiniowana przez Yu (więcej informacji w \cite{willett} lub 
+\cite{nowak}) 
 jest pewnym uogólnieniem pojęcia średniowalności, zdefiniowanym dla grup. Definicja 
 nawet optycznie przypomina pewne kryterium średniowalności, a więc istnienie 
 ciągu Følnera. Istotne jest to, iż własność $ A $ jest niezmiennikiem relacji 
 zgrubnej równoważności, coraz częściej pojawiającej się w literaturze (więcej informacji 
-o geometrii zgrubnej można znaleźć w [Roe]).
+o geometrii zgrubnej można znaleźć w \cite{roe}).
 
 Dowód głównego twierdzenia poparty będzie przykładem, w którym udowodnimy w niestandardowy 
 sposób własność $ A $ dla konkretnego kompleksu kostkowego $ \text{CAT(0)} $, 
 przestrzeni euklidesowej $ \mathbb{R}^d $. Dalsze postępowanie okaże się równoległe, choć 
 nieco bardziej skomplikowane technicznie. 
+
+Jako główny wkład własny w treść pracy traktuję nie treść dowodu głównego twierdzenia, 
+zawartego już w \cite{brodzki}, a w który ingerowałem jedynie sporadycznie, przedstawiając 
+odrobinę różniące się dowody poszczególnych lematów, lecz rozdział ten dowód poprzedzający. 
+Zawarłem w nim zebrane z różnych źródeł definicje, lematy i przykłady dotyczące pojęć 
+związanych blisko z tematem mojej pracy, w szczególności własności $ A $, geometrii zgrubnej, 
+przestrzeni 
+$ \text{CAT(} \kappa \text{)} $ w przypadku szczególnym $ \kappa = 0 $ oraz kompleksów 
+kostkowych. 
+
+Dla zainteresowanych starałem się w odpowiednich miejscach pozostawić odnośniki 
+do głębszej literatury dotyczącej każdego z tych tematów.
 
 \chapter{Wprowadzenie}
 
@@ -1081,4 +1095,8 @@ wykorzystując przy okazji następujące lematy:
 \end{lemma}
 Dowód, zarówno tego lematu, jak i całego twierdzenia, 
 jest identyczny jak w przypadku euklidesowym.
+
+\bibliographystyle{plain}
+\bibliography{main}
+\addcontentsline{toc}{chapter}{Bibliografia}
 \end{document}
