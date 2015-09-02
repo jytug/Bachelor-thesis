@@ -6,6 +6,9 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{bbold}
+\usepackage{graphicx}
+\graphicspath{ {Rysunki/} }
+\usepackage[rightcaption]{sidecap}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definicja}[section]
@@ -113,6 +116,7 @@ kostkowych.
 Dla zainteresowanych starałem się w odpowiednich miejscach pozostawić odnośniki 
 do głębszej literatury dotyczącej każdego z tych tematów.
 
+
 \chapter{Wprowadzenie}
 
 Pierwszy rozdział tej pracy poświęcę przypomnieniu podstawowych definicji, 
@@ -123,7 +127,7 @@ w odpowiednich miejscach znajdą się odsyłacze do literatury.
 \section{Własność A}
 
 Własność A jest pewnym przeniesieniem pojęcia średniowalności na przestrzenie metryczna. 
-Przed właściwym wprowadzeniem tego pojęcia przypomne kilka podstawowych 
+Przed właściwym wprowadzeniem tego pojęcia przypomnę kilka podstawowych 
 definicji dotyczących geometrii zgrubnej.
 
 Przez $ X,Y $ będziemy oznaczać przestrzenie metryczne, $ d $ będzie oznaczać metrykę 
@@ -153,18 +157,19 @@ i $ Y $.
 
 Powiemy, że dwa przekształcenia $ f_1, f_2 : X \rightarrow Y $ są blisko, 
 jeśli istnieje $ C > 0 $ takie, że $$ d(f_1(x), f_2(x)) < C  ~ \text{dla każdego } x \in X$$ 
-Zbiór $ A \subset X $ jest $ r $-gęsty, jeśli dla każdego $ x \in X $ istnieje 
-element $ a \in A $ taki, że $ d(x,a) < r $. Zbiór $ A $ jest zgrubnie gęsty, jeśli 
-jest $ r $-gęsty dla pewnego $ r > 0 $.
-
 \begin{definition}
 	Powiemy, że przestrzenie $ X,Y $ są \textbf{zgrubnie równoważne}, jeśli 
 	istnieją przekształcenia zgrubne $ \varphi : X \rightarrow Y, 
 	~ \psi : Y \rightarrow X  $ takie, że 
 	$ \varphi \circ \psi $ jest blisko $ \text{id}_Y $, zaś $ \psi \circ \varphi $ jest blisko 
-	$ \text{id}_X $. Przestrzenie $ X,Y $ są zgrubnie równoważne wtedy i tylko wtedy, gdy 
-	istnieje $ \varphi : X \rightarrow Y $ takie, że $ \varphi(X) \subset Y $ jest 
-	podzbiorem zgrubnie gęstym.
+	$ \text{id}_X $.
+\end{definition}
+
+\begin{definition}
+	Niech $ r > 0$. Powiemy, że
+	zbiór $ A \subset X $ jest $ r $-gęsty, jeśli dla każdego $ x \in X $ istnieje 
+	element $ a \in A $ taki, że $ d(x,a) < r $. Zbiór $ A $ jest \textbf{zgrubnie gęsty}, 
+	jeśli jest $ r $-gęsty dla pewnego $ r > 0 $.
 \end{definition}
 
 \begin{remark}
@@ -173,14 +178,15 @@ jest $ r $-gęsty dla pewnego $ r > 0 $.
 \begin{proof}
 	Ustalmy $ \varepsilon > 0 $. Niech $ \mathcal{D} = \{D \subset X : \forall_{x_1, x_2 \in D, ~
 	x_1 \neq x_2} ~ d(x_1, x_2) > \varepsilon \} $. Rodzina $ \mathcal{D} $ jest niepusta 
-	oraz każdy łańcuch jest ograniczony z góry przez swoją sumę. Wobec lematu Kuratowskiego-
-	Zorna istnieje więc maksymalny element $D_0 \in \mathcal{D}$. Jest on $ \varepsilon $-
-	gęstym podzbiorem $ X $. Istotnie, załóżmy przeciwnie - istnieje $ x \in X $ taki, że 
+	oraz każdy łańcuch jest ograniczony z góry przez swoją sumę. Wobec lematu 
+	Kuratowskiego-Zorna istnieje więc maksymalny element $D_0 \in \mathcal{D}$. 
+	Jest on $ \varepsilon $-gęstym podzbiorem $ X $. 
+	Istotnie, załóżmy przeciwnie - istnieje $ x \in X $ taki, że 
 	$ d(x, D_0) > \varepsilon $. Wtedy zbiór $ D_0 \cup \{x\} $ należy do rodziny 
 	$ \mathcal{D} $ i zawiera w sobie $ D_0 $, co przeczy maksymalności $ D_0 $
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{def:propA}
 	Przestrzeń dyskretna $ X $ ma \textbf{własność A}, jeśli dla każdego $ R>0 $ oraz 
 	$ \varepsilon > 0 $ istnieje rodzina niepustych, skończonych zbiorów $ A_x \subset 
 	X \times \mathbb{N} $ indeksowana $ x \in X $ oraz stała $ S > 0 $ taka, że 
@@ -191,11 +197,10 @@ jest $ r $-gęsty dla pewnego $ r > 0 $.
 		\item Dla dowolnego elementu $(x', n) \in A_x$ zachodzi $$ d(x,x') \leq S $$
 	\end{enumerate}
 	Dowolna przestrzeń metryczna ma własność A, jeśli zawiera zgrubnie gęsty podzbiór 
-	o tej własności.
+	o tej własności. Symbol $ \# $ oznacza tu liczbę elementów zbioru, zaś symbol 
+	$ \Delta $ - operację różnicy symetrycznej 
+	(a więc $A \Delta B = (A \setminus B) \cup (B \setminus A)$)
 \end{definition}
-Symbol $ \# $ oznacza liczbę elementów zbioru, zaś symbol $ \Delta $ - operację 
-różnicy symetrycznej (a więc $A \Delta B = (A \setminus B) \cup (B \setminus A)$)
-
 
 \begin{remark}
 	Własność A jest niezmiennikiem zgrubnej równoważności przestrzeni dyskretnych. 
@@ -225,7 +230,7 @@ Uwaga ta jest bezpośrednią konsekwencją poniższego lematu:
 	$$ X \times \mathbb{N} \supset A_x = \{(x', n): ~ n \leq \# \{ (y,m) \in B_{\varphi(x)} : ~
 	\psi(y) = x' \}\} $$
 
-	Sprawdzimy, że rodzina ta spełnia warunki definicji 1.3.3. Jeśli 
+	Sprawdzimy, że rodzina ta spełnia warunki definicji \ref{def:propA}. Jeśli 
 	$ d(x,x') < R $, to $ d(\varphi(x), \varphi(x')) < R' $, a więc 
 	$$ \frac{\# (A_x \Delta A_{x'})}{\# A_x} \leq \frac{\# B_{\varphi(x)} \Delta 
 	B_{\varphi(x')}}{\# B_{\varphi(x)}} < \varepsilon $$
@@ -263,10 +268,28 @@ W dalszych rozważaniach będziemy korzystać z następującej charakteryzacji w
 	Konieczność tego warunku wynika stąd, że przekształcenie $ f_x(y) = \#\left( A_x \cap \left( 
 	\{y\} \times \mathbb{N} \right) \right) $ spełnia powyższe warunki, zaś dostateczność - 
 	stąd, iż $ A_x = \{(y,n) \in X \times \mathbb{N} : ~ 1 \leq n \leq f_x(y) \} $ spełnia 
-	warunki definicji 1.3.3.
+	warunki definicji \ref{def:propA}.
 \end{proof}
 
-
+\begin{remark}
+	Korzystając z powyższej charakteryzacji w przypadku zbioru wierzchołków kompleksu 
+	kostkowego, rozpatrywanego z metryką długości krawędziowej, będziemy 
+	sprawdzać warunek drugi jedynie dla stałej $ R = 1 $.
+\end{remark}
+\begin{proof}
+	Niech $ R > 0 $ oraz niech dwa wierzchołki kompleksu $ x $ oraz $ x' $ spełniają 
+	$d(x,x') < R $. Istnieje więc $ \mathbb{N} \ni  r < R $ oraz ciąg wierzchołków 
+	$ x = x_0, \dots, x_r = x' $, kolejno sąsiednich, stanowiących ścieżkę łączącą 
+	$ x $ z $ x' $. Wystarczy wtedy skorzystać z nierówności trojkąta:
+	$$ \frac{ \| f_{n,x} - f_{n,x'}\|}{\| f_{n,x}\|} \leq \sum\limits_{i=0}^{r-1}
+	\frac{ \| f_{n,x_i} - f_{n,x_{i+1}}\|}{\|f_{n,x}\|} = 
+	\sum\limits_{i=0}^{r-1} \frac{ \| f_{n,x_i} - f_{n,x_{i+1}}\|}{\|f_{n,x_i}\|}\cdot
+	\frac{\|f_{n,x_i}\|}{\|f_{n,x}\|}$$
+	
+	Jeśli więc zbieżność ma miejsce na zbiorze sąsiednich wierzchołków, to składnik po 
+	prawej stronie również dąży do zera, ponieważ $ \frac{\|f_{n,x}\|}{\|f_{n,x_i}\|} 
+	\rightarrow 1$, co wynika stąd, że $ d(x,x_i) < R $ oraz z warunku drugiego.
+\end{proof}
 
 \section{Przestrzenie $\text{CAT(0)}$}
 Niech $ (X, d) $ będzie przestrzenią metryczną. Odcinkiem geodezyjnym nazywamy 
@@ -304,12 +327,13 @@ do izometrii przestrzeni $ \mathbb{R}^2 $ i nazwiemy go trójkątem porównania 
 	\overline{z}] $ zachodzi nierówność:
 	$$ d(x,p) \leq d_{\mathbb{R}^2}(\overline{x}, \overline{p}) $$
 \end{definition} 
-
-Innymi słowy, w przestrzeniach $ \text{CAT(0)} $ trójkąty są ,,szczuplejsze'' niż w 
-przestrzeni euklidesowej. O takich przestrzeniach powiemy, że mają niedodatnią 
-krzywiznę.
-
+\begin{SCfigure}[0.7][h]
+	\caption{\small{Intuicyjnie, trójkąty w przestrzeniach $ \text{CAT(0)} $ są ,,szczuplejsze''
+	niż w przestrzeni euklidesowej.}}
+	\centering
+	\includegraphics{trojkat_hiperboliczny}
 %%miejsce na rysuneczek chudego trójkąta
+\end{SCfigure}
 
 \begin{example} Nietrudno jest o kilka przykładów takich przestrzeni:
 	\begin{itemize}
@@ -335,7 +359,12 @@ krzywiznę.
 \begin{corollary}
 	Sfera $ S^2 $ nie jest przestrzenią $ \text{CAT(0)} $. Płaszczyzna $ \mathbb{R}^2 $ 
 	wyposażona w metrykę pochodzącą od normy $ \ell_1 $ nie jest przestrzenią $ \text{CAT(0)} $
-	%miejsce na rysuneczek płaszczyzny z l_1
+	\begin{SCfigure}
+	\caption{\small{Na rysunku zaznaczono dwa odcinki geodezyjne łączące punkty 
+	$ x = (0,0) $ i $ x_1 = (1,1) $ na płaszyźnie z metryką pochodzącą od normy $ \ell_1 $}}
+	\centering
+	\includegraphics{plaszczyzna_l1}
+	\end{SCfigure}
 \end{corollary}
 
 \section{Kompleksy kostkowe $ \text{CAT(0)} $}
@@ -382,7 +411,7 @@ przecięcie ścian o wyższym kowymiarze.
 
 \begin{remark}
 	W ten sposób zdefiniowany kompleks kostkowy jest przestrzenią metryczną, przy czym 
-	metryka długości\footnote{length metric} indukowana jest z metryki euklidesowej 
+	metryka długości indukowana jest z metryki euklidesowej 
 	na $ [0,1]^n \subset \mathbb{R}^n$. Odległość punktów $ x,y $ mierzona w metryce 
 	długości jest to infinum długości krzywych $ \gamma : [a,b] \rightarrow X $ 
 	łączących $ x$ z $ y $. Długość krzywej definiujemy następująco: 
@@ -392,7 +421,7 @@ przecięcie ścian o wyższym kowymiarze.
 \begin{proposition}
 	Z powyższej definicji łatwo wynikają następujące fakty:
 	\begin{itemize}
-	\item Obcięcie rzutowania $ p : \bigsqcup_{K \in \mathcal{K}} \rightarrow X$ do jednej 
+	\item Obcięcie rzutowania $ p : \bigsqcup_{K \in \mathcal{K}} K \rightarrow X$ do jednej 
 	kostki $ K \in \mathcal{K}$ jest iniekcją.
 	\item Niepuste przecięcie dwóch kostek jest ścianą obydwu.
 	\end{itemize}	
@@ -403,18 +432,25 @@ przecięcie ścian o wyższym kowymiarze.
 	\begin{itemize}
 	\item Rozważmy graf metryczny bez wierzchołków izolowanych, w którym każda krawędź ma 
 	długość 1. Każda krawędź jest izometryczna z $ [0,1] $, zaś sklejenia to
-	po prostu izometrie punktów. Jest to prosty przykład kompleksu kostkowego.
+	po prostu izometrie punktów.
 	\item Torus można interpretować jako kompleks kostkowy. Rozważmy zbiór 
 	$ [0,3]\times[0,3] \subset \mathbb{R}^2 $, w którym można wprowadzić podział 
 	na dziewięć części izometrycznych z $ [0,1]^2 $. Wtedy odpowiednie izometrie 
 	prowadzą do konstrukcji torusa (rysunek).
 	%miejsce na rysuneczek torusa
+	\begin{SCfigure}[0.8][h]
+	\caption{\small{Klasyczna konstrukcja torusa jako przykład kompleksu kostkowego. 
+	Strzałki wyznaczają izometrie odpowiednich krawędzi}}
+	\centering
+	\includegraphics{torus}
+	\end{SCfigure}
 	\end{itemize}
 \end{example}
 
 
 \begin{remark}
-	Na zbiorze wierzchołków można wprowadzić metrykę długości krawędziowej, gdzie 
+	Na zbiorze wierzchołków kompleksu kostkowego można wprowadzić metrykę 
+	długości krawędziowej, według której 
 	odległość dwóch wierzchołków to minimum długości łączących ich ścieżek złożonych 
 	z krawędzi kompleksu (przez krawędź rozumiemy ścianę o wymiarze 1).
 	Z naszego punktu widzenia możemy utożsamić te metryki, z uwagi na następujący fakt:
@@ -427,40 +463,47 @@ przecięcie ścian o wyższym kowymiarze.
 	tych metryk jest sobie zgrubnie równoważny.
 \end{proposition}
 \begin{proof}
-%WTF?
-%	Na potrzeby dowodu przez $ d_1 $ oznaczymy metrykę długości, zaś przez $ d_2 $ - 
-%	metrykę długości krawędziowej. Niech 
-%	$$ x = x_0, x_1, x_2 \dots x_n = y$$
-%	będzie ciągiem wierzchołków na najkrótszej ścieżce krawędziowej łączącej $ x $ oraz $ y $.
-%	Wówczas
-%	$$ d_1(x,y) \leq \sum\limits_{i = 0}^{n-1} d_1(x_{i}, x_{i+1}) = n = d_2(x,y) $$
-
-%	Odwrotnie, mając dwa wierzchołki $ x,y $ takie, że $ d_2(x,y) = k $, to odcinek 
-%	łączący $ x $ oraz $ y $ jest kompleksem kostkowym $ \text{CAT(0)} $, który 
-%	zanurza się jako podkompleks $ [0,1]^k $. Zanurzenie to jest izometrią ze względu na 
-%	$ d_2 $ kontrakcją ze względu na $ d_1 $. Obraz punktu $ x $ przy tym zanurzeniu 
-%	oznaczmy przez $ \tilde x $ i, nadużywając nieco notacji, przez $ d_1, d_2 $ oznaczmy 
-%	również odpowiednio metrykę długości oraz długości krawędziowej również w kostce 
-%	$ [0,1]^k$. Wtedy
-%	$$ d_2(x,y) = d_2(\tilde x, \tilde y) \sqrt{d_1(\tilde x, \tilde y)} \leq 
-%	\sqrt{d_1(x,y)} $$
+	Identyczność jest zgrubną równoważnością.
 \end{proof}
 
-Kompleksy kostkowe $ \text{CAT(0)} $ posiadają strukturę kombinatoryczną. Zbiór 
-wierzchołków drogowo spójnego kompleksu kostkowego $ \text{CAT(0)} $ można podzielić na dwa 
-drogowo spójne podzbiory zbioru wierzchołków. Taki podział nazwiemy 
-\textbf{hiperpłaszczyzną}, zaś oba 
-spójne podzbiory nazwiemy \textbf{półprzestrzenią}. 
+\begin{definition}
+	Niech $ K \simeq [0,1]^n $ będzie kostką. Wówczas \textbf{śródkostką} $ K $ nazwiemy 
+	zbiór
+	$$ M_i = \{ x \in K : x_i = 1/2 \} \text{ dla } i = 1,\dots,n $$
+\end{definition}
+Wprowadźmy na chwilę następującą relację równoważności: dwie krawędzie w kompleksie 
+kostkowym są sobie \textbf{kwadratowo równoważne} (piszemy: $ e \sim e' $), jeśli 
+są sobie naprzeciwległe w pewnym kwadracie w tym kompleksie. Taką relację rozszerzamy do 
+relacji równoważności.
+\begin{definition}
+	\textbf{Hiperpłaszczyzną} dualną do klasy równoważności $ [e] $ (lub po prostu do 
+	krawędzi $ e $) nazwiemy sumę śródkostek przecinających elementy klasy $ [e] $.
+\end{definition}
 
-%CO ZA DEBIL TO PISAŁ!!!!
-%
-%Trzeba wpisać dobrą definicję hiperpłaszczyzny
-%
+\begin{SCfigure}[0.8][h]
+	\caption{\small{Przykład hiperpłaszczyzny w kompleksie kostkowym. Ciemniejszym kolorem
+	zaznaczono hiperpłaszczyznę dualną do krawędzi E}}
+	\centering
+	\includegraphics{hiper}
+\end{SCfigure}
 
+Zwróćmy uwagę, że hiperpłaszczyzna wyznacza podział zbioru wierzchołków na dwa 
+podzbiory, które będziemy dalej nazywać \textbf{półpłaszczyznami}. 
+Będzie to miało kluczowe znaczenie kombinatoryczne. 
 Dwie hiperpłaszczyzny tworzą podział kompleksu na cztery przecięcia półpłaszczyzn. Jeśli 
 wszystkie są niepuste, to hiperpłaszczyzny \textbf{przecinają się}. Dwa wierzchołki 
-$ x,y $ są\textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
+$ x,y $ są \textbf{oddzielone} przez hiperpłaszczyznę $ H $, jeśli należą do różnych 
 wyznaczonych przez nią półprzestrzeni. 
+
+\begin{remark}
+	Zgodnie z definicją \ref{def:propA} przestrzeń metryczna ma własność $ A $, jeśli 
+	zawiera dyskretną podprzestrzeń, która ma tę własność. Oczywiście w przypadku kompleksów 
+	kostkowych szukaną podprzestrzenią jest przestrzeń wierzchołków. Dlatego też w dalszej 
+	części pracy przez $ X $ będziemy oznaczać zbiór \underline{wierzchołków} 
+	kompleksu kostkowego, zaś przez $ x, x', y, z $ - wierzchołki. \textbf{Kompleksem 
+	kostkowym CAT(0)} nazwiemy oczywiście kompleks kostkowy, który jest dodatkowo 
+	$ \text{CAT(0)} $. 
+\end{remark}
 
 Zbiór hiperpłaszczyzn oddzielających $ x $ od $ y $ będziemy oznaczać przez 
 $\mathfrak{H}(x,y)$. \textbf{Odcinkiem} łączącym $ x $ oraz $ y $ nazwiemy przecięcie 
@@ -479,10 +522,10 @@ $ \sigma(H_1) \cap \sigma(H_2) \neq \emptyset $. Taką funkcję nazwiemy \textbf
 Wierzchołek $ x $ definiuje takie przekształcenie: dla hiperpłaszczyzny $ H $ wyznacza 
 półprzestrzeń $ H_x $ zawierającą $ x $ (rzeczywiście, dla każdych dwóch hiperpłaszczyzn 
 $ H,K $ mamy $ x \in H \cap K $). Jeśli więc oznaczymy przez $\mathfrak{U}$ zbiór wszystkich 
-ultrafiltrów na $ X $, zaś przez $ V (X) $ - zbiór wierzchołków $ X $, to wskazaliśmy iniekcję 
-$$ \iota : V(X) \rightarrow \mathfrak{U} $$
+ultrafiltrów na $ X $ to wskazaliśmy iniekcję 
+$$ \iota : X \rightarrow \mathfrak{U} $$
 
-Wówczas elementy zbioru $$ \partial X = \mathfrak{U} \setminus \iota(V(X)) $$
+Wówczas elementy zbioru $$ \partial X = \mathfrak{U} \setminus \iota(X) $$
 nazwiemy \textbf{krawędziami w nieskończoności}. Utożsamiając z wierzchołkiem $ x $ 
 ultrafiltr $ \iota(x) $, możemy więc zdefiniować
 $$ \overline{X} = X \cup \partial X $$
@@ -593,7 +636,8 @@ kostkowy z przestrzenią euklidesową.
 	$$ \bigcap\limits_{i=1}^j (H_i)_z $$
 	
 	Aby uzasadnić, że powyższy zbiór jest niepusty, wystarczy skorzystać z twierdzenia 
-	Helly'ego mówiącego o przecięciach zbiorów wypukłych. %rol98, Helly's theorem
+	Helly'ego mówiącego o przecięciach zbiorów wypukłych (patrz \cite{helly}). 
+	%rol98, Helly's theorem
 \end{remark}
 Dla $ x \in X, z \in \overline{X} $ przez $ \mathfrak{R}_z(x) $ oznaczymy 
 podzbiór $ \mathfrak{H}(x,z) $ złożony z tych hiperpłaszczyzn, które oddzielają 
@@ -604,8 +648,7 @@ $x $ od $ z $ oraz pewnego sąsiada $ x $.
 	Wówczas $ \# \mathfrak{R}_z(x) \leq \dim{X}$
 \end{lemma}
 \begin{proof}
-	Dowód można znaleźć w (BCGNW)
-	 lemat 1.13
+	Dowód można znaleźć w \cite{brodzki}, lemat 1.13
 \end{proof}
 
 W następnym twierdzeniu uzasadnimy, że odcinki łączące wierzchołki (być może 
@@ -815,7 +858,7 @@ $$ \| f \| = \| f \|_{\ell_1} = \sum\limits_{x \in \text{dom}(f)} |f(x)| $$
 	$ f_{n,x} $ nie zależy od wyboru $ d $ ani $ x $, jedynie $ n $ oraz $ N $.
 \end{remark}
 
-W celu udowodnienia własności $ A $ dla przestrzeni Euklidesowych $ \mathbb{R}^n $ 
+W celu udowodnienia własności $ A $ dla przestrzeni euklidesowych $ \mathbb{R}^n $ 
 należy znaleźć pewne oszacowanie normy $ f_{n,x} - f_{n,x'} $ dla $ x,x' \in 
 \mathbb{Z}^n $ w rozsądnej odległości od siebie. Odpowiada za to poniższy lemat:
 
@@ -1023,7 +1066,7 @@ wykorzystując przy okazji następujące lematy:
 \begin{lemma}
 	Niech $ X $ będzie kompleksem kostkowym o wymiarze nie większym niż $ d < \infty$. 
 	Przyjmijmy pewien wymiar otoczki $ N \geq d-1 $. Niech wreszcie $ x \in X $ będzie 
-	wierzchołkiem Wówczas 
+	wierzchołkiem. Wówczas 
 	$$ \|f_{n,x}\| = {n + N \choose n} $$
 \end{lemma}
 

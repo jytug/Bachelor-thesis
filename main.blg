@@ -7,45 +7,45 @@ Warning--empty journal in caprace
 Warning--empty year in brodzki
 Warning--empty year in sageev
 Warning--empty journal in schwer
-You've used 7 entries,
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            530 strings with 4679 characters,
-and the built_in function-call counts, 1466 in all, are:
-= -- 137
-> -- 49
+            535 strings with 4825 characters,
+and the built_in function-call counts, 1670 in all, are:
+= -- 157
+> -- 56
 < -- 1
-+ -- 21
-- -- 14
-* -- 68
-:= -- 276
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 27
++ -- 24
+- -- 16
+* -- 76
+:= -- 315
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 71
-empty$ -- 124
-format.name$ -- 14
-if$ -- 290
+cite$ -- 12
+duplicate$ -- 81
+empty$ -- 141
+format.name$ -- 16
+if$ -- 331
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 14
-pop$ -- 37
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 41
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 24
 quote$ -- 0
-skip$ -- 45
+skip$ -- 52
 stack$ -- 0
-substring$ -- 35
-swap$ -- 7
+substring$ -- 40
+swap$ -- 8
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 26
+type$ -- 30
 warning$ -- 4
-while$ -- 14
-width$ -- 8
-write$ -- 70
+while$ -- 16
+width$ -- 9
+write$ -- 80
 (There were 4 warnings)

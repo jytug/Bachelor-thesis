@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{helly}
+Béla Bollobás.
+\newblock Problem 29, intersecting convex sets: Helly's theorem.
+\newblock {\em The Art of Mathematics: Coffee Time in Memphis}, 2006.
+
 \bibitem{caprace}
 Pierre~Emmanuel Caprace.
 \newblock Lectures on proper cat(0) spaces and their isometry groups.
@@ -7,7 +12,7 @@ Pierre~Emmanuel Caprace.
 
 \bibitem{nowak}
 Piotr~Nowak oraz Guoliang~Yu.
-\newblock What is... propery a?
+\newblock What is... property a?
 \newblock {\em Notices of the American Mathematical Society 55 (2008), no. 4,
   474--475.}, 2008.
 
