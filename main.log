@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  2 SEP 2015 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.9)  3 SEP 2015 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,14 +575,14 @@ LaTeX Font Info:    External font `plex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 75.
+(Font)              <10.95> on input line 76.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 
  []
 
@@ -597,22 +597,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--78
 ] [4
 
 ]
-LaTeX Font Info:    Try loading font information for U+bbold on input line 104.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 120.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd) [5] [6
 
 ]
 Rozdzia\PlPrIeC {\l } 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 142.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 148.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 148.
  [7]
-Overfull \hbox (21.6582pt too wide) in paragraph at lines 233--235
+Overfull \hbox (21.6582pt too wide) in paragraph at lines 239--241
 []\OT4/cmr/m/n/10.95 Sprawdzimy, »e ro-dzi-na ta speª-nia wa-run-ki de-fi-ni-cj
 i 1.1.4[]. Je-±li $\OML/plm/m/it/10.95 d\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95
  x; x[]\OT4/cmr/m/n/10.95 ) \OML/plm/m/it/10.95 < R$\OT4/cmr/m/n/10.95 , to $\O
@@ -623,27 +623,27 @@ ML/plm/m/it/10.95 d\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 '\OT4/cmr/m/n/10.95
 
 [8]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 294.
+(Font)              <14.4> on input line 299.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 294.
+(Font)              <10> on input line 299.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 294.
+(Font)              <7> on input line 299.
  [9] <Rysunki/trojkat_hiperboliczny.PNG, id=54, 167.6664pt x 134.904pt>
 File: Rysunki/trojkat_hiperboliczny.PNG Graphic file (type png)
 
 <use Rysunki/trojkat_hiperboliczny.PNG>
 Package pdftex.def Info: Rysunki/trojkat_hiperboliczny.PNG used on input line 3
-34.
+39.
 (pdftex.def)             Requested size: 167.66597pt x 134.90367pt.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 336.
+(Font)              <5> on input line 341.
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []$ \OT4/cmr/m/n/10 s¡ ,,szczu-plej-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 \OT4/cmr/m/n/10 sze'' ni» w prze-strze-ni
  []
 
@@ -651,137 +651,135 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--336
 File: Rysunki/plaszczyzna_l1.PNG Graphic file (type png)
 
 <use Rysunki/plaszczyzna_l1.PNG>
-Package pdftex.def Info: Rysunki/plaszczyzna_l1.PNG used on input line 366.
+Package pdftex.def Info: Rysunki/plaszczyzna_l1.PNG used on input line 371.
 (pdftex.def)             Requested size: 216.80946pt x 165.01607pt.
  [10 <./Rysunki/trojkat_hiperboliczny.PNG>]
 [11 <./Rysunki/plaszczyzna_l1.PNG>]
 <Rysunki/torus.PNG, id=68, 127.677pt x 139.2402pt>
 File: Rysunki/torus.PNG Graphic file (type png)
  <use Rysunki/torus.PNG>
-Package pdftex.def Info: Rysunki/torus.PNG used on input line 445.
+Package pdftex.def Info: Rysunki/torus.PNG used on input line 450.
 (pdftex.def)             Requested size: 127.67668pt x 139.23985pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
 [][]\OT4/cmr/m/n/10.95 :
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 446--446
+Underfull \hbox (badness 1622) in paragraph at lines 451--451
 |\OT4/cmr/m/n/10 Klasyczna kon-struk-cja
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 446--446
+Underfull \hbox (badness 4341) in paragraph at lines 451--451
 \OT4/cmr/m/n/10 to-ru-sa ja-ko przy-kªad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
 \OT4/cmr/m/n/10 Strzaª-ki wy-zna-cza-j¡
  []
 
+
+Overfull \hbox (13.5669pt too wide) in paragraph at lines 465--470
+\OT4/cmr/bx/n/10.95 Stwierdzenie 1.3.2. \OT4/cmr/m/n/10.95 Niech $\OML/plm/m/it
+/10.95 X$ \OT4/cmr/m/n/10.95 b¦-dzie sko«-cze-nie wy-mia-ro-wym kom-plek-sem ko
+st-ko-wym $[]$.
+ []
+
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <9> on input line 482.
 [12 <./Rysunki/torus.PNG>] <Rysunki/hiper.PNG, id=73, 210.3057pt x 140.9265pt>
 File: Rysunki/hiper.PNG Graphic file (type png)
 
 <use Rysunki/hiper.PNG>
-Package pdftex.def Info: Rysunki/hiper.PNG used on input line 487.
+Package pdftex.def Info: Rysunki/hiper.PNG used on input line 507.
 (pdftex.def)             Requested size: 210.30518pt x 140.92615pt.
 
-Underfull \hbox (badness 3849) in paragraph at lines 488--488
+Underfull \hbox (badness 3849) in paragraph at lines 508--508
 [][]\OT4/cmr/m/n/10.95 : |\OT4/cmr/m/n/10 Przykªad hi-per-pªasz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--488
+Underfull \hbox (badness 10000) in paragraph at lines 508--508
 \OT4/cmr/m/n/10 czy-zny w kom-plek-sie kost-ko-wym.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--488
+Underfull \hbox (badness 10000) in paragraph at lines 508--508
 \OT4/cmr/m/n/10 Ciem-niej-szym ko-lo-rem za-zna-czo-no
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 509.
+LaTeX Font Info:    Try loading font information for U+euf on input line 529.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [13 <./Rysunki/hiper.PNG>]
-Overfull \hbox (0.44728pt too wide) in paragraph at lines 534--543
+Overfull \hbox (0.44728pt too wide) in paragraph at lines 554--563
 []\OT4/cmr/m/n/10.95 Mo»emy prze-nie±¢ pod-sta-wo-we kom-bi-na-to-rycz-ne wªa-s
 no-±ci kom-plek-su kost-ko-we-go $[]$
  []
 
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <9> on input line 569.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 583.
-[14]
-
-LaTeX Warning: Citation `helly' on page 15 undefined on input line 639.
-
-
-Overfull \hbox (6.06036pt too wide) in paragraph at lines 667--670
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 603.
+[14] [15]
+Overfull \hbox (6.06036pt too wide) in paragraph at lines 687--690
 \OT4/cmr/bx/n/10.95 Twierdzenie 1.3.1. \OT4/cmr/m/it/10.95 Niech $\OML/plm/m/it
 /10.95 X$ \OT4/cmr/m/it/10.95 b¦-dzie sko«-cze-nie wy-mia-ro-wym kom-plek-sem k
 ost-ko-wym $[]$,
  []
 
-[15]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 730.
+(amsmath)                 on input line 750.
 
 [16] [17] [18
 
 ]
 Rozdzia\PlPrIeC {\l } 2.
 [19] [20] [21]
-Overfull \hbox (4.45833pt too wide) in paragraph at lines 934--934
+Overfull \hbox (4.45833pt too wide) in paragraph at lines 969--969
 []\OT4/cmr/bx/n/14.4 Wªasno±¢ A dla sko«-cze-nie wy-mia-ro-wych kom-plek-sów ko
 st-
  []
 
 [22] [23] [24] (./main.bbl [25] [26
 
-]) [27] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+]) [27] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3378 strings out of 494985
- 44024 string characters out of 6180449
- 105222 words of memory out of 5000000
- 6454 multiletter control sequences out of 15000+600000
+ 3385 strings out of 494985
+ 44115 string characters out of 6180449
+ 107278 words of memory out of 5000000
+ 6461 multiletter control sequences out of 15000+600000
  36149 words of font info for 115 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  38i,12n,28p,775b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/e
-nc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plme.enc
-}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/pl/plbxti10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/pl/plex10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/
-plmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/
-plr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy6.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on main.pdf (29 pages, 309181 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.en
+c}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/pl/plme.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc
+}</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/
+plbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbxti10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/pl/plmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/pl/plmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/pl/plr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/pl/plr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/pl/plsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/
+plsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
+Output written on main.pdf (29 pages, 312820 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  146 compressed objects within 2 object streams

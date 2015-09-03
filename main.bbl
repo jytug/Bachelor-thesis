@@ -27,6 +27,11 @@ John Roe.
   Lecture Series}.
 \newblock American Mathematical Society, Providence, Rhode Island, 2003.
 
+\bibitem{dilworth}
+R.P.Dilworth.
+\newblock A decomposition theorem for partially ordered sets.
+\newblock {\em Annals of Mathematics}, 1950.
+
 \bibitem{sageev}
 Michah Sageev.
 \newblock Cat(0) cube complexes and groups.
@@ -34,12 +39,11 @@ Michah Sageev.
 
 \bibitem{schwer}
 Petra Schwer.
-\newblock Lecture notes on cat(0) cubical complexes).
+\newblock Lecture notes on cat(0) cubical complexes.
 \newblock 2013.
 
 \bibitem{willett}
 Rufus Willett.
-\newblock Some notes on property a.
-\newblock arXiv:math/0612492v2, 2006.
+\newblock Some notes on property a, 2006.
 
 \end{thebibliography}

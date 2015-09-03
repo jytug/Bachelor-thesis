@@ -72,8 +72,10 @@
 
 \begin{abstract}
 %	{
-	Praca ta skupia się na dowodzie, iż kompleksy kostkowe $\text{CAT(0)} $
-	mają własność A.
+	Praca ta skupia się na dowodzie twierdzenia mówiącego, że każdy skończenie wymiarowy 
+	kompleks kostkowy $ \text{CAT(0)} $ ma własność A. Rozdział pierwszy dostarcza 
+	podstawowych informacji dotyczących pojęć własności A oraz kompleksu kostkowego 
+	$ \text{CAT(0)} $. W rozdziale drugim znajduje się dowód głównego twierdzenia.
 %	}
 \end{abstract}
 
@@ -86,37 +88,41 @@ Kompleksy kostkowe są pewnym naturalnym uogólnieniem pojęcia grafu na większ
 wymiarów - zaś własność $ \text{CAT(0)} $ odpowiada za ,,brak cykli'', uogólniając 
 analogicznie przypadek szczególny - drzewa. Nie jest 
 więc zaskakujące pytanie o ich własności - poniższa praca wprowadza podstawowe 
-pojęcia przestrzeni $ \text{CAT(0)} $ oraz kompleksów kostkowych. W poszukiwaniach głębszej 
-literatury polecam zajrzeć do \cite{caprace}, \cite{schwer} bądź też \cite{sageev}.
+pojęcia dotyczące przestrzeni $ \text{CAT(0)} $ oraz kompleksów kostkowych. 
+Więcej informacji na temat tych przestrzeni znaleźć można w 
+\cite{caprace}, \cite{schwer} bądź też \cite{sageev}.
 
 W swojej pracy skupiam się na dowodzie twierdzenia mówiącego, że każdy skończenie 
 wymiarowy kompleks kostkowy ma własność $ A $, opierając się na \cite{brodzki}. Własność $ A $, 
 po raz pierwszy zdefiniowana przez Yu (więcej informacji w \cite{willett} lub 
 \cite{nowak}) 
-jest pewnym uogólnieniem pojęcia średniowalności, zdefiniowanym dla grup. Definicja 
-nawet optycznie przypomina pewne kryterium średniowalności, a więc istnienie 
+jest pewnym uogólnieniem pojęcia średniowalności, zdefiniowanego dla grup. Definicja nawet 
+przypomina pewne kryterium średniowalności, istnienie 
 ciągu Følnera. Istotne jest to, iż własność $ A $ jest niezmiennikiem relacji 
 zgrubnej równoważności, coraz częściej pojawiającej się w literaturze (więcej informacji 
 o geometrii zgrubnej można znaleźć w \cite{roe}).
 
-Dowód głównego twierdzenia poparty będzie przykładem, w którym udowodnimy w niestandardowy 
-sposób własność $ A $ dla konkretnego kompleksu kostkowego $ \text{CAT(0)} $, 
-przestrzeni euklidesowej $ \mathbb{R}^d $. Dalsze postępowanie okaże się równoległe, choć 
-nieco bardziej skomplikowane technicznie. 
+Jako główny wkład własny w treść pracy chciałbym traktować nie treść dowodu głównego 
+twierdzenia, naśladującą \cite{brodzki}, lecz rozdział pierwszy, w którym zawarłem 
+podstawowe definicje, lematy i twierdzenia dotyczące pojęć istotnych w mojej pracy. Forma 
+rozdziału pierwszego, opartego przede wszystkim na \cite{schwer}, \cite{caprace}, 
+\cite{willett} oraz \cite{nowak} ma na celu sprawić, aby do lektury konieczna była 
+znajomość jedynie podstawowych pojęć topologii.
 
-Jako główny wkład własny w treść pracy traktuję nie treść dowodu głównego twierdzenia, 
-zawartego już w \cite{brodzki}, a w który ingerowałem jedynie sporadycznie, przedstawiając 
-odrobinę różniące się dowody poszczególnych lematów, lecz rozdział ten dowód poprzedzający. 
-Zawarłem w nim zebrane z różnych źródeł definicje, lematy i przykłady dotyczące pojęć 
-związanych blisko z tematem mojej pracy, w szczególności własności $ A $, geometrii zgrubnej, 
-przestrzeni 
-$ \text{CAT(} \kappa \text{)} $ w przypadku szczególnym $ \kappa = 0 $ oraz kompleksów 
-kostkowych. 
+Wśród dowodów twierdzeń i lematów można znaleźć drobne różnice względem literatury 
+zawartej w bibliografii, w szczególności w dowodach uwagi \ref{rem:densesubset} oraz 
+stwierdzenia \ref{pro:equivalent}. Zmiany te zostały wprowadzone, gdy rozumowania 
+obecne w literaturze mogły zostać opisane w sposób bardziej szczegółowy, bądź przeciwnie - 
+uproszczone, w zamierzeniu z pozytywnym skutkiem dla zrozumienia przez czytelnika.
 
-Dla zainteresowanych starałem się w odpowiednich miejscach pozostawić odnośniki 
-do głębszej literatury dotyczącej każdego z tych tematów.
-
-
+Rozdział drugi, skupiający się na dowodzie głównego twierdzenia, składa się z dwóch sekcji. 
+W pierwszej z nich znajduje się dowód własności A dla przestrzeni euklidesowych 
+$ \mathbb{R}^d $. Może wydawać się to zaskakujące, jako że fakt ten nie jest trudny do
+udowodnienia - okazuje się jednak, że po kilku modyfikacjach standardowy dowód 
+własności A dla przestrzeni $ \mathbb{R}^d $ daje się dość łatwo uogólnić na dowolny, 
+skończenie wymiarowy kompleks kostkowy $ \text{CAT(0)}$. Więcej informacji dotyczących 
+tego pomysłu znajduje się w rozdziale drugim, gdzie Czytelnik będzie już zaznajomiony 
+z narzędziami służacymi do dowodu, w uwadze \ref{rem:motivation}.
 \chapter{Wprowadzenie}
 
 Pierwszy rozdział tej pracy poświęcę przypomnieniu podstawowych definicji, 
@@ -172,7 +178,7 @@ jeśli istnieje $ C > 0 $ takie, że $$ d(f_1(x), f_2(x)) < C  ~ \text{dla każd
 	jeśli jest $ r $-gęsty dla pewnego $ r > 0 $.
 \end{definition}
 
-\begin{remark}
+\begin{remark}\label{rem:densesubset}
 	Każda przestrzeń metryczna $ X $ zawiera dyskretny podzbiór zgrubnie gęsty.
 \end{remark}
 \begin{proof}
@@ -224,7 +230,7 @@ Uwaga ta jest bezpośrednią konsekwencją poniższego lematu:
 	istnieje $ R_0 $ takie, że $$ d(x,x') < R \Rightarrow d(\varphi(x), \varphi(x')) < R_0 $$ 
 	Dla stałych $ R_0, \varepsilon $ istnieje rodzina 
 	$ \{B_y \subset Y \times \mathbb{N}\}_{y \in Y} $ 
-	indeksowana $ y \in Y $ oraz stała $S'$ spełniającaewarunki definicji własności $ A $.
+	indeksowana $ y \in Y $ oraz stała $S'$ spełniająca warunki definicji własności $ A $.
  	 Zdefiniujmy 
 	teraz 
 	$$ X \times \mathbb{N} \supset A_x = \{(x', n): ~ n \leq \# \{ (y,m) \in B_{\varphi(x)} : ~
@@ -247,7 +253,7 @@ Uwaga ta jest bezpośrednią konsekwencją poniższego lematu:
 
 W dalszych rozważaniach będziemy korzystać z następującej charakteryzacji własności A:
 
-\begin{proposition}
+\begin{proposition}\label{classification}
 	Dyskretna przestrzeń metryczna $ X $ ma własność A wtedy i tylko wtedy, gdy 
 	istnieje ciąg rodzin funkcji o skończonym nośniku $ f_{n,x} : X \rightarrow \mathbb{N}
 	\cup \{0\} $, indeksowany $ x \in X $, oraz ciąg $ S_n \in \mathbb{R}_{+} $ taki, że
@@ -272,9 +278,8 @@ W dalszych rozważaniach będziemy korzystać z następującej charakteryzacji w
 \end{proof}
 
 \begin{remark}
-	Korzystając z powyższej charakteryzacji w przypadku zbioru wierzchołków kompleksu 
-	kostkowego, rozpatrywanego z metryką długości krawędziowej, będziemy 
-	sprawdzać warunek drugi jedynie dla stałej $ R = 1 $.
+	W przypadku kompleksów kostkowych wystarczy drugi warunek sprawdzać dla stałej 
+	$ R = 1 $.
 \end{remark}
 \begin{proof}
 	Niech $ R > 0 $ oraz niech dwa wierzchołki kompleksu $ x $ oraz $ x' $ spełniają 
@@ -456,14 +461,29 @@ przecięcie ścian o wyższym kowymiarze.
 	Z naszego punktu widzenia możemy utożsamić te metryki, z uwagi na następujący fakt:
 \end{remark}
 
-\begin{proposition}
-	Niech $ X $ będzie kompleksem kostkowym $ \text{CAT(0)}$. Metryka długości na 
+\begin{proposition}\label{pro:equivalent}
+	Niech $ X $ będzie skończenie wymiarowym 
+	kompleksem kostkowym $ \text{CAT(0)}$. Metryka długości na 
 	zbiorze wierzchołków $ X $ jest zgrubnie równoważna z metryką długości krawędziowej.
 	Jeśli $ X $ jest skończenie wymiarowy, to zbiór wierzchołków z pierwszą bądź drugą z 
 	tych metryk jest sobie zgrubnie równoważny.
 \end{proposition}
 \begin{proof}
-	Identyczność jest zgrubną równoważnością.
+	Identyczność jest zgrubną równoważnością. Rzeczywiście, przez $ X $ oznaczmy 
+	zbiór wierzchołków skończenie wymiarowego kompleksu kostkowego, przez 
+	$ d_1 $ metrykę długości, zaś przed $ d_2 $-metrykę długości krawędziowej. 
+	Wówczas oczywiste jest, że dla każdych dwóch $ x,y \in X $ mamy
+	$$ d_1(x,y) \leq d_2(x,y) $$.	
+	Przekształcenie $ \text{id}: (X,d_1) \rightarrow (X,d_2) $ jest więc bornologiczne.
+
+	Niech teraz $ n = \dim(X) $. Wówczas oczywiście dla dwóch wierzchołków $ x,y $ 
+	należących do jednej kostki zachodzi $ d_1(x,y) \leq \sqrt{n} $. Wiemy też, że liczba 
+	krawędzi w $ n$-kostce wynosi $ n*2^{n-1} $\footnote{Na potrzeby tego dowodu 
+	dokładna liczba nie jest istotna - wystarczy, że jest skończona}, możemy więc, 
+	niezbyt oszczędnie, oszacować, że dla dwóch wierzchołków $ x,y $ należących do jednej 
+	kostki mamy $ d_2(x,y) \leq n*2^{n-1} $. 
+
+	O ile więc 
 \end{proof}
 
 \begin{definition}
@@ -692,7 +712,7 @@ $$ H \preceq K \iff H_x \subset K_x $$
 	o mocy $ m + 1 $, to $ S $ jest sumą rozłączną $ m $ łańcuchów.
 \end{lemma}
 \begin{proof}
-	Można znaleźć w (Dilworth, a decomposition theorem for partially ordered sets).
+	Dowód lematu Dilwortha zawarty jest w \cite{dilworth}.
 \end{proof}
 \begin{corollary}
 	Zbiór częściowo uporządkowany $ \left(\mathfrak{H}(x,y), \preceq \right) $ 
@@ -703,7 +723,7 @@ $$ H \preceq K \iff H_x \subset K_x $$
 	Wystarczy skorzystać z twierdzenia Helly'ego, lematu Dilwortha oraz 
 	lematu 1.3.5 
 \end{proof}
-\begin{proof}[Dowód twierdzenia 1.3.1]
+\begin{proof}[Dowód twierdzenia \ref{thm:zanurzanie}]
 	Dowód tego twierdzenia przeprowadzimy tylko dla przypadku, gdy $ x $ jest 
 	wierzchołkiem $ X $. Weźmy rozkład zbioru $ \mathfrak{H}(x,y)$ na łańcuchy, którego 
 	istnienia dostarcza poprzedni lemat
@@ -726,7 +746,7 @@ $$ H \preceq K \iff H_x \subset K_x $$
 \end{proof}
 
 \section{Kombinacje}
-Funkcje, spełniające warunki Stwierdzenia 1.1.1. będziemy konstruować przy 
+Funkcje, spełniające warunki stwierdzenia \ref{classification} będziemy konstruować przy 
 użyciu dwumianu Newtona, a więc funkcji $ {n \choose k} $. Kombinatorycznie funkcja ta 
 oznacza \textit{liczbę $ k $-podzbiorów $ n $-zbioru}, w szczególności jej definicja jest 
 poprawna dla całkowitych $ n \geq k \geq 0 $. Przy użyciu łatwej interpretacji 
@@ -760,13 +780,28 @@ $$ {n \choose -1} = (-1)^{n-1} {0 \choose -1-n} $$
 
 W tym rozdziale skupimy się na dowodzie twierdzenia łączącego kompleksy kostkowe 
 $ \text{CAT(0)} $ z własnością A. Zaczniemy od przykładu motywującego dowód głównego 
-twierdzenia. O funkcjach $ f_{n,x} $ wymienionych w Stwierdzeniu 1.1.1. będziemy mówić jako o 
+twierdzenia. O funkcjach $ f_{n,x} $ wymienionych w stwierdzeniu \ref{classification} 
+będziemy mówić jako o 
 \textit{funkcjach wagowych}. Również z warunków podanych w tym stwierdzeniu korzystać 
 będziemy zamiast definicji własności $A$.
 
 Ustalmy również pewien wymiar $\mathbb{N} \ni N \geq d $. 
-Niektóre lematy prawdziwe będą również dla przypadku $ N = d-1$ - zostanie to odpowiednio 
-podkreślone.
+
+\begin{remark}\label{rem:motivation}
+	W standardowym dowodzie własności $ A $ dla przestrzeni euklidesowych jako funkcji 
+	wagowych $ f_{n,x} $ używa się funkcji charakterystycznych kul o promieniu $ n $ 
+	i środku w punkcie $ x $. W naszym dowodzie, łatwo uogólniającym się dla 
+	dowolnych kompleksów kostkowych $ \text{CAT(0)} $ o skończonym wymiarze, wprowadzimy 
+	kilka zmian, z których każda jest istotna dla rzeczonego uogólnienia. Po pierwsze, jako 
+	nośnik funkcji wagowej wybierzemy szczególny podzbiór kuli o promieniu $ n $ i środku 
+	w $ x $. Dodatkowo, zamiast definiować, przy ustalonym $ n $, funkcję $ f_{n,x} $ tak samo, 
+	uzależnimy ten wybór od poszczególnych $ x $.
+
+	Pierwsza sekcja tego rozdziału nie jest więc celem samym w sobie; ma za zadanie 
+	raczej przedstawić Czytelnikowi proces, który prowadził do otrzymania ostatecznego 
+	wyniku zawartego w \cite{brodzki}. Pominięcie jej prowadziłoby raczej nie do uniknięcia 
+	kłopotliwych obliczeń i zbędnych wyników, lecz do dodatkowej dezorientacji Czytelnika.
+\end{remark}
 
 \section{Własność $ A $ dla przestrzeni euklidesowych}
 
@@ -780,7 +815,7 @@ podkreślone.
 		n - d(x,y) & \text{ jeśli } y = K
 	\end{cases} $$
 	Wówczas ciąg rodzin funkcji $ f_{n,x}(y) = \tilde f_{n,x}(y) \cdot \mathbb{1}_{B
-	(x, n)} (y) $ spełnia warunki Stwierdzenia 1.1.1
+	(x, n)} (y) $ spełnia warunki stwierdzenia \ref{classification}
 \end{example}
 
 Pewna intuicja stojąca za tym przykładem jest następująca: przy $ n $ dążącym do 
@@ -832,7 +867,7 @@ $$ \| f \| = \| f \|_{\ell_1} = \sum\limits_{x \in \text{dom}(f)} |f(x)| $$
 
 	Pokażemy, że dla każdego $ \hat y \in [\textbf{0}, \hat x] $ zachodzi 
 	\begin{equation} \label{eq:iksjeden}
-	\sum\limits_{j = 0}^{|x_1|} f_{n,x}^d(y^j) = f^{d-1}_{n,\hat x}(\hat y
+	\sum\limits_{j = 0}^{|x_1|} f_{n,x}^d(y^j) = f^{d-1}_{n,\hat x}(\hat y)
 	\end{equation}
 
 	Załóżmy jednak na moment, że to prawda. Możemy wtedy obliczyć normę $ f_{n,x}^d $:
@@ -917,7 +952,7 @@ Powyższe wyniki prowadzą już do następującego twierdzenia:
 	Przestrzeń euklidesowa $ \mathbb{R}^d $ ma własność $ A $.
 \end{theorem}
 \begin{proof}
-	Korzystamy ze stwierdzenia 1.1.1. Odpowiedni ciąg stałych to $ S_n = n $. Fakt, 
+	Korzystamy ze stwierdzenia \ref{classification}. Odpowiedni ciąg stałych to $ S_n = n $. Fakt, 
 	że nośnikiem kolejnych funkcji $ f_{n,x} $ jest $ B(x,n) $, wynika stąd, że 
 	wyrażenie $ {n - d(x,y) + \delta(y) \choose \delta(y)} $ znika dla $ n - d(x,y) + \delta(y)
 	< \delta(y) $. Zbieżność wynika z ostatnich dwóch lematów, a dokładniej:
