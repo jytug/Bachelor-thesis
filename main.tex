@@ -52,11 +52,11 @@
 11.1 Matematyka\\
 }
 
-\klasyfikacja{14 Algebraic Geometry\\
-	}
+\klasyfikacja{52C99, discrete geometry \\
+	51F99, metric geometry}
 
 \keywords{
-	Kompleks kostkowy $ \text{CAT(0)} $, własność A
+	Kompleks kostkowy, własność A, $ \text{CAT(0)} $.
 }
 
 \newtheorem{defi}{Definicja}[section]
@@ -71,12 +71,15 @@
 %%streszczenie - strona początkowa
 
 \begin{abstract}
-%	{
-	Praca ta skupia się na dowodzie twierdzenia mówiącego, że każdy skończenie wymiarowy 
-	kompleks kostkowy $ \text{CAT(0)} $ ma własność A. Rozdział pierwszy dostarcza 
-	podstawowych informacji dotyczących pojęć własności A oraz kompleksu kostkowego 
-	$ \text{CAT(0)} $. W rozdziale drugim znajduje się dowód głównego twierdzenia.
-%	}
+
+Praca ta skupia się na dowodzie twierdzenia mówiącego, że każdy skończenie wymiarowy 
+kompleks kostkowy  $\text{CAT(0)}$ ma własność A. Rozdział pierwszy dostarcza podstawowych 
+informacji dotyczących pojęć: własności A, kompleksów kostkowych oraz przestrzeni 
+$\text{CAT(} \kappa\text{)} $ w przypadku szczególnym $ \kappa = 0 $. Dodatkowo przedstawione 
+są podstawowe definicje z zakresu geometrii zgrubnej. W rozdziale drugim znajduje się dowód 
+głównego twierdzenia, poprzedzony dowodem własności A w przypadku przestrzeni euklidesowych, 
+stanowiącym motywację oraz podporę dalszego rozumowania.
+
 \end{abstract}
 
 \tableofcontents
@@ -113,7 +116,7 @@ Wśród dowodów twierdzeń i lematów można znaleźć drobne różnice względ
 zawartej w bibliografii, w szczególności w dowodach uwagi \ref{rem:densesubset} oraz 
 stwierdzenia \ref{pro:equivalent}. Zmiany te zostały wprowadzone, gdy rozumowania 
 obecne w literaturze mogły zostać opisane w sposób bardziej szczegółowy, bądź przeciwnie - 
-uproszczone, w zamierzeniu z pozytywnym skutkiem dla zrozumienia przez czytelnika.
+uproszczone, w zamierzeniu z pozytywnym skutkiem dla zrozumienia przez Czytelnika.
 
 Rozdział drugi, skupiający się na dowodzie głównego twierdzenia, składa się z dwóch sekcji. 
 W pierwszej z nich znajduje się dowód własności A dla przestrzeni euklidesowych 
@@ -441,7 +444,7 @@ przecięcie ścian o wyższym kowymiarze.
 	\item Torus można interpretować jako kompleks kostkowy. Rozważmy zbiór 
 	$ [0,3]\times[0,3] \subset \mathbb{R}^2 $, w którym można wprowadzić podział 
 	na dziewięć części izometrycznych z $ [0,1]^2 $. Wtedy odpowiednie izometrie 
-	prowadzą do konstrukcji torusa (rysunek).
+	prowadzą do konstrukcji torusa.
 	%miejsce na rysuneczek torusa
 	\begin{SCfigure}[0.8][h]
 	\caption{\small{Klasyczna konstrukcja torusa jako przykład kompleksu kostkowego. 
@@ -476,14 +479,15 @@ przecięcie ścian o wyższym kowymiarze.
 	$$ d_1(x,y) \leq d_2(x,y) $$.	
 	Przekształcenie $ \text{id}: (X,d_1) \rightarrow (X,d_2) $ jest więc bornologiczne.
 
-	Niech teraz $ n = \dim(X) $. Wówczas oczywiście dla dwóch wierzchołków $ x,y $ 
-	należących do jednej kostki zachodzi $ d_1(x,y) \leq \sqrt{n} $. Wiemy też, że liczba 
-	krawędzi w $ n$-kostce wynosi $ n*2^{n-1} $\footnote{Na potrzeby tego dowodu 
-	dokładna liczba nie jest istotna - wystarczy, że jest skończona}, możemy więc, 
-	niezbyt oszczędnie, oszacować, że dla dwóch wierzchołków $ x,y $ należących do jednej 
-	kostki mamy $ d_2(x,y) \leq n*2^{n-1} $. 
+	Aby wykazać, że jest właściwe, musimy przenieść się nieco w przyszłość i odnieść do 
+	twierdzenia \ref{thm:zanurzanie}, mówiącego, że każdy odcinek łączący dwa wierzchołki 
+	w kompleksie kostkowym $ \text{CAT(0)} $ o skończonym wymiarze zanurza się 
+	izometrycznie\footnote{Izometrycznie oczywiście ze względu na metrykę długości} 
+	w pewną przestrzeń euklidesową $ \mathbb{R}^d $. Jest jasne, że w przekształcenie 
+	identycznościowe między przestrzenią $ \mathbb{R}^d $ wyposażoną w metrykę długości 
+	oraz $ \mathbb{R}^d $ z metryką długości krawędziowej jest właściwe.
 
-	O ile więc 
+	Razem ze wspomnianym twierdzeniem daje to oczekiwany wynik.
 \end{proof}
 
 \begin{definition}
@@ -885,7 +889,7 @@ $$ \| f \| = \| f \|_{\ell_1} = \sum\limits_{x \in \text{dom}(f)} |f(x)| $$
 	Aby udowodnić~\ref{eq:iksjeden}, należy zauważyć, iż 
 	$ \delta (y^{i+1}) = \delta(\hat y) - 1 $ dla $ i \geq 0 $ oraz iż $ d(x,y^i) = 
 	d(x, y^{i+1}) + 1 $, a następnie skorzystać z indukcji względem $ i = |x_1|$. 
-	Dokładnie obliczenia zostawiam czytelnikowi.
+	Dokładnie obliczenia zostawiam Czytelnikowi.
 \end{proof}
 
 \begin{remark}
@@ -1042,7 +1046,8 @@ Jest to konsekwencja poniższych dwóch lematów:
 \end{lemma}
 
 \begin{proof}
-	% do uzupełnienia / przekminienia / odesłania
+	Nie chcąc kopiować sugestywnego rysunku, po dowód tego lematu odsyłam do pracy 
+	\cite{brodzki}, lemat 3.5.
 \end{proof}
 
 \begin{lemma}
@@ -1178,3 +1183,4 @@ jest identyczny jak w przypadku euklidesowym.
 \bibliography{main}
 \addcontentsline{toc}{chapter}{Bibliografia}
 \end{document}
+
